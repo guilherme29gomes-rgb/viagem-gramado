@@ -8,6 +8,7 @@ import os
 import re
 import time
 import urllib.parse
+import urllib.error
 import urllib.request
 
 UA = "viagem-gramado/1.0 (roteiro pessoal; github.com/guilherme29gomes-rgb/viagem-gramado)"
@@ -16,9 +17,17 @@ SAIDA = "fotos/candidatas"
 
 
 def get(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read()
+    # A Wikimedia responde 429 quando há pedidos demais: espera e tenta de novo.
+    for espera in (0, 10, 30, 60):
+        time.sleep(espera)
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code != 429:
+                raise
+    raise RuntimeError("muitos pedidos (429)")
 
 
 def buscar(termo):
@@ -47,8 +56,12 @@ def buscar(termo):
 def main():
     os.makedirs(SAIDA, exist_ok=True)
     locais = json.load(open("scripts/fotos.json", encoding="utf-8"))
-    creditos = {}
+    caminho_creditos = os.path.join(SAIDA, "creditos.json")
+    creditos = json.load(open(caminho_creditos, encoding="utf-8")) if os.path.exists(caminho_creditos) else {}
     for local in locais:
+        if local.get("pronta"):
+            continue
+        time.sleep(2)
         try:
             achadas = list(buscar(local["busca"]))[:3]
         except Exception as e:  # segue para o próximo local
@@ -63,8 +76,8 @@ def main():
                 print("ok", nome, foto["titulo"])
             except Exception as e:
                 print("erro ao baixar", nome, e)
-            time.sleep(0.5)
-    with open(os.path.join(SAIDA, "creditos.json"), "w", encoding="utf-8") as f:
+            time.sleep(1.5)
+    with open(caminho_creditos, "w", encoding="utf-8") as f:
         json.dump(creditos, f, ensure_ascii=False, indent=1)
 
 

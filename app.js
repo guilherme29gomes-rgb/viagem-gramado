@@ -37,10 +37,19 @@
     trem: '<rect x="5" y="3.5" width="14" height="13" rx="3"/><path d="M5 10.5h14M9 19.5l-2 2M15 19.5l2 2"/><circle cx="9" cy="13.5" r=".8"/><circle cx="15" cy="13.5" r=".8"/>',
     neve: '<path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"/><path d="M9.5 4.5L12 6l2.5-1.5M9.5 19.5L12 18l2.5 1.5"/>',
   };
-  const icone = (l) => `<span class="icone-local" aria-hidden="true"><svg viewBox="0 0 24 24">${ICONES[l.tipo] || ICONES.pin}</svg></span>`;
-  // Capa com foto: só aparece quando as fotos podem ser carregadas.
-  const capaHTML = (l, id) => fotosOnline && l.foto
-    ? `<div class="capa" data-foto="${esc(l.foto)}" data-galeria="${id}">${icone(l)}<span class="ver-fotos">${ICO_FOTO} fotos</span></div>` : "";
+  // Fotos salvas junto com o app (fotos.js). Onde não houver, fica o ícone.
+  const FOTOS_LOCAIS = window.FOTOS_LOCAIS || {};
+  Object.entries(LOCAIS).forEach(([id, l]) => { l.id = id; });
+  const fotoDe = (l) => FOTOS_LOCAIS[l.id];
+  const icone = (l) => fotoDe(l)
+    ? `<span class="icone-local foto" aria-hidden="true"><img src="${esc(fotoDe(l).src)}" alt=""></span>`
+    : `<span class="icone-local" aria-hidden="true"><svg viewBox="0 0 24 24">${ICONES[l.tipo] || ICONES.pin}</svg></span>`;
+  // Capa grande: foto salva; senão, busca online (quando permitido).
+  const capaHTML = (l, id) => {
+    if (fotoDe(l)) return `<div class="capa" data-galeria="${id}"><img src="${esc(fotoDe(l).src)}" alt="${esc(l.nome)}"><span class="ver-fotos">${ICO_FOTO} fotos</span></div>`;
+    if (fotosOnline && l.foto) return `<div class="capa" data-foto="${esc(l.foto)}" data-galeria="${id}">${icone(l)}<span class="ver-fotos">${ICO_FOTO} fotos</span></div>`;
+    return "";
+  };
   const ICO_FOTO = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>`;
   const ICO_PINO = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg>`;
   const urlBusca = (q) => `https://www.google.com/search?q=${encodeURIComponent(q)}`;
@@ -117,19 +126,22 @@
   function abrirGaleria(lugar) {
     $("#galeria-titulo").textContent = lugar.nome;
     const box = $("#galeria-fotos");
-    box.innerHTML = lugar.foto ? `<p class="vazio">Carregando fotos…</p>` : "";
+    const salva = fotoDe(lugar);
+    const figura = (src, link, credito) => `<figure><img src="${esc(src)}" alt="${esc(lugar.nome)}" loading="lazy"><figcaption>${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">Wikimedia Commons</a>` : "Wikimedia Commons"}${credito ? " · " + esc(credito) : ""}</figcaption></figure>`;
+    const primeira = salva ? figura(salva.src, salva.pagina, salva.credito) : "";
+    box.innerHTML = primeira || (lugar.foto ? `<p class="vazio">Carregando fotos…</p>` : "");
     $("#galeria-links").innerHTML = `
       <a class="pill" href="${urlGoogleFotos(lugar.mapa || lugar.nome)}" target="_blank" rel="noopener">${ICO_FOTO} Mais fotos no Google</a>
       <a class="pill" href="${urlMapa(lugar.mapa || lugar.nome)}" target="_blank" rel="noopener">${ICO_PINO} Abrir no mapa</a>`;
     if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
     if (!lugar.foto || !fotosOnline) {
-      box.innerHTML = `<p class="vazio">Toque em "Mais fotos no Google" para ver este lugar.</p>`;
+      if (!primeira) box.innerHTML = `<p class="vazio">Toque em "Mais fotos no Google" para ver este lugar.</p>`;
       return;
     }
     buscarFotos(lugar.foto).then((fotos) => {
-      box.innerHTML = fotos.length
-        ? fotos.map((f) => `<figure><img src="${esc(f.src)}" alt="${esc(lugar.nome)}" loading="lazy"><figcaption><a href="${esc(f.pagina)}" target="_blank" rel="noopener">Wikimedia Commons</a>${f.credito ? " · " + esc(f.credito) : ""}</figcaption></figure>`).join("")
-        : `<p class="vazio">Não encontrei fotos agora (sem internet?). Tente o botão abaixo.</p>`;
+      const outras = fotos.filter((f) => !salva || f.pagina !== salva.pagina);
+      box.innerHTML = primeira + outras.map((f) => figura(f.src, f.pagina, f.credito)).join("")
+        || `<p class="vazio">Não encontrei fotos agora (sem internet?). Tente o botão abaixo.</p>`;
     });
   }
 
@@ -202,11 +214,12 @@
   }
 
   function blocoHTML(it, l, id, comFoto) {
+    const capa = l && comFoto ? capaHTML(l, id) : "";
     return `<li class="bloco${l ? "" : " simples"}">
-      ${comFoto ? capaHTML(l, id) : ""}
+      ${capa}
       <div class="bloco-corpo">
         <p class="hora">${esc(it.hora)}${it.extra ? ` <span class="tag kids">adicionado</span>` : ""}</p>
-        ${l ? `<div class="titulo-local">${icone(l)}<h3 class="bloco-local">${esc(l.nome)}</h3></div>` : ""}
+        ${l ? `<div class="titulo-local">${capa ? "" : icone(l)}<h3 class="bloco-local">${esc(l.nome)}</h3></div>` : ""}
         <p class="item-texto">${esc(it.texto)}</p>
         ${l ? `<div class="links">
           <button class="pill" data-galeria="${id}">${ICO_FOTO} Fotos</button>
@@ -272,7 +285,7 @@
           return `<article class="card">
             ${capaHTML(l, i.local)}
             <div class="corpo">
-              <div class="titulo-local">${icone(l)}<h3>${esc(l.nome)}</h3></div>
+              <div class="titulo-local">${capaHTML(l, i.local) ? "" : icone(l)}<h3>${esc(l.nome)}</h3></div>
               <div class="meta"><span class="tag">${esc(i.dia)}</span>
                 <span class="tag ${ok ? "ok" : "status"}">${ok ? "Garantido" : esc(i.status)}</span></div>
               <p>${esc(i.dica)}</p>
@@ -314,7 +327,7 @@
         ${lista.map((x) => `<article class="card">
           ${capaHTML(x, x.id)}
           <div class="corpo">
-            <div class="titulo-local">${icone(x)}<h3>${esc(x.nome)}</h3></div>
+            <div class="titulo-local">${capaHTML(x, x.id) ? "" : icone(x)}<h3>${esc(x.nome)}</h3></div>
             <div class="meta"><span class="tag">${esc(x.cidade)}</span>${x.kids ? `<span class="tag kids">bom com criança</span>` : ""}</div>
             <p>${esc(x.dica)}</p>
             <div class="acoes">
