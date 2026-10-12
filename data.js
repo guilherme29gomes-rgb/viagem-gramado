@@ -9,7 +9,8 @@ const VIAGEM = {
 };
 
 const LOCAIS = {
-  poa: { tipo: "aviao", nome: "Aeroporto Salgado Filho", foto: "Aeroporto Internacional Salgado Filho", mapa: "Aeroporto Internacional Salgado Filho Porto Alegre", emoji: "✈️" },
+  vcp: { tipo: "aviao", nome: "Aeroporto de Viracopos (Campinas)", foto: "Aeroporto Internacional de Viracopos", mapa: "Aeroporto Internacional de Viracopos Campinas", emoji: "✈️" },
+  poa: { tipo: "aviao", nome: "Aeroporto Salgado Filho (Porto Alegre)", foto: "Aeroporto Internacional Salgado Filho", mapa: "Aeroporto Internacional Salgado Filho Porto Alegre", emoji: "✈️" },
   estrada: { tipo: "carro", nome: "Estrada BR-116 / RS-115", foto: "RS-115 Gramado", mapa: "RS-115 Gramado", emoji: "🚗" },
   wish: { tipo: "hotel", nome: "Wish Serrano", foto: "Wish Serrano Gramado", mapa: "Wish Serrano Resort Gramado", emoji: "🏨" },
   centro: { tipo: "pin", nome: "Centro de Gramado", foto: "Avenida Borges de Medeiros Gramado", mapa: "Centro Gramado RS", emoji: "🏘️" },
@@ -35,8 +36,9 @@ const ROTEIRO = [
   {
     data: "2026-11-07", titulo: "Sábado 07/11", subtitulo: "Chegada e Parada de Natal", capa: "parada",
     itens: [
-      { hora: "08h05", texto: "Decolagem", local: "poa" },
-      { hora: "09h45", texto: "Pouso em Porto Alegre", local: "poa" },
+      { hora: "06h05", texto: "Chegada a Viracopos, 2h antes do voo. Despachar malas e cadeirinha (se levar a sua)", local: "vcp" },
+      { hora: "08h05", texto: "Decolagem de Viracopos (Campinas) para Porto Alegre", local: "vcp" },
+      { hora: "09h45", texto: "Pouso no Salgado Filho, em Porto Alegre", local: "poa" },
       { hora: "09h45–11h00", texto: "Desembarque, bagagem e deslocamento até a locadora. Monte a cadeirinha ali mesmo, com calma, antes de pegar a estrada" },
       { hora: "11h00", texto: "Retirada do carro" },
       { hora: "11h00–12h40", texto: "Estrada até Gramado, cerca de 130 km pela BR-116 e RS-115", local: "estrada" },
@@ -98,7 +100,8 @@ const ROTEIRO = [
       { hora: "11h40", texto: "Chegada a Porto Alegre, com folga" },
       { hora: "12h00", texto: "Devolução do carro" },
       { hora: "12h30", texto: "Check-in no aeroporto", local: "poa" },
-      { hora: "14h00", texto: "Decolagem", local: "poa" },
+      { hora: "14h00", texto: "Decolagem do Salgado Filho para Viracopos", local: "poa" },
+      { hora: "~15h45", texto: "Pouso em Viracopos, Campinas. Confira o horário exato no bilhete", local: "vcp" },
     ],
   },
 ];
@@ -106,7 +109,8 @@ const ROTEIRO = [
 // Pendências: marque no app conforme for resolvendo (fica salvo no celular).
 const PENDENCIAS = [
   { grupo: "Antes de viajar", itens: [
-    { id: "voo-checkin", texto: "Fazer check-in online do voo de ida (abre ~48h antes)" },
+    { id: "voo-checkin", texto: "Fazer check-in online do voo de ida Viracopos → Porto Alegre (abre ~48h antes)" },
+    { id: "vcp-transporte", texto: "Combinar ida e volta de Viracopos: estacionamento no aeroporto, aplicativo ou carona (chegar às 6h05 do dia 07)" },
     { id: "locadora", texto: "Confirmar reserva do carro, horário de retirada (11h) e devolução (12h do dia 12)" },
     { id: "cadeirinha", texto: "Decidir: levar a própria cadeirinha ou alugar na locadora" },
     { id: "doc-crianca", texto: "Separar documento da criança (RG ou certidão) — exigido no voo e no Acquamotion" },
@@ -116,19 +120,19 @@ const PENDENCIAS = [
     { id: "clima", texto: "Ver previsão do tempo: novembro na serra varia de ~10°C a 25°C, com chuva" },
   ]},
   { grupo: "Hotel — Wish Serrano", itens: [
-    { id: "early-checkin", texto: "Pedir early check-in para 12h40 do sábado" },
+    { id: "early-checkin", local: "wish", texto: "Pedir early check-in para 12h40 do sábado" },
     { id: "estacionamento", texto: "Confirmar valor da diária do estacionamento (cobrada à parte)" },
     { id: "berco", texto: "Solicitar berço no quarto" },
     { id: "cafe-hotel", texto: "Confirmar se o café da manhã está incluso e horário (dia 12 às 7h30)" },
   ]},
   { grupo: "Reservas de restaurante", itens: [
-    { id: "res-galeto", texto: "Reservar Galeto Itália — sábado 07/11, 19h" },
-    { id: "res-garfo", texto: "Reservar Garfo e Bombacha — domingo 08/11, 12h45" },
-    { id: "res-hector", texto: "Reservar mesa no Hector Pizzaria pelo site — terça 10/11, 18h" },
-    { id: "res-belavista", texto: "Reservar e pagar Café Colonial Bela Vista online — quarta 11/11, 17h" },
+    { id: "res-galeto", local: "galeto", texto: "Reservar Galeto Itália — sábado 07/11, 19h" },
+    { id: "res-garfo", local: "garfo", texto: "Reservar Garfo e Bombacha — domingo 08/11, 12h45" },
+    { id: "res-hector", local: "hector", texto: "Reservar mesa no Hector Pizzaria — terça 10/11, 18h" },
+    { id: "res-belavista", local: "belavista", texto: "Reservar e pagar Café Colonial Bela Vista online — quarta 11/11, 17h" },
   ]},
   { grupo: "Volta", itens: [
-    { id: "voo-volta", texto: "Fazer check-in online do voo de volta" },
+    { id: "voo-volta", texto: "Fazer check-in online do voo de volta Porto Alegre → Viracopos" },
     { id: "tanque", texto: "Abastecer o carro antes de devolver (conferir política da locadora)" },
     { id: "malas", texto: "Malas prontas na noite de quarta" },
   ]},
@@ -297,3 +301,22 @@ const MALA = [
     ]},
   ]},
 ];
+
+// Contatos para reservas e ingressos. Fontes: sites oficiais e matérias de
+// turismo (2024–2026). "confirmar": número tirado de matéria antiga.
+const CONTATOS = {
+  wish: { site: "https://grupowish.com/", obs: "O WhatsApp de reservas fica no site do Grupo Wish" },
+  galeto: { site: "https://www.galetoitalia.com.br/", telefone: "(54) 3286-3375" },
+  garfo: { obs: "Sem site ou WhatsApp confirmados: veja o contato na ficha do Google Maps" },
+  hector: { obs: "Sem site ou WhatsApp confirmados: veja o contato na ficha do Google Maps" },
+  belavista: { site: "https://www.belavista.tur.br/", telefone: "(54) 3286-2097", whatsapp: "5432861608", confirmar: true },
+  bondinhos: { whatsapp: "54992061225", confirmar: true },
+  skyglass: { site: "https://www.skyglasscanela.com.br/", telefone: "(54) 3699-9200" },
+  prawer: { obs: "Sem contato confirmado: veja na ficha do Google Maps" },
+  acquamotion: { site: "https://www.acquamotion.com.br/", whatsapp: "5430501700", telefone: "0800 800 3737", confirmar: true },
+  minimundo: { site: "https://www.minimundo.com.br/", whatsapp: "5432864055" },
+  aldeia: { obs: "Sem contato confirmado: veja na ficha do Google Maps" },
+  parada: { site: "https://www.natalluzdegramado.com.br/" },
+  "x-supercarros": { site: "https://www.supercarros.com.br/" },
+  "x-olivas": { site: "https://www.olivasdegramado.com.br/" },
+};

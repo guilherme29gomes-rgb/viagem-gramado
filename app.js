@@ -53,6 +53,20 @@
   };
   const ICO_FOTO = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>`;
   const ICO_PINO = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg>`;
+  const ICO_ZAP = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z"/></svg>`;
+  const ICO_SITE = `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>`;
+  const ICO_FONE = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>`;
+  // Botões de contato (site, WhatsApp, telefone) de um local, quando houver.
+  function contatoHTML(id) {
+    const c = (typeof CONTATOS !== "undefined" && CONTATOS[id]) || null;
+    if (!c) return "";
+    const tel = c.telefone ? c.telefone.replace(/\D/g, "") : "";
+    return [
+      c.site ? `<a class="pill" href="${esc(c.site)}" target="_blank" rel="noopener">${ICO_SITE} Site</a>` : "",
+      c.whatsapp ? `<a class="pill zap" href="https://wa.me/55${esc(c.whatsapp)}" target="_blank" rel="noopener">${ICO_ZAP} WhatsApp</a>` : "",
+      tel ? `<a class="pill" href="tel:+55${tel}">${ICO_FONE} ${esc(c.telefone)}</a>` : "",
+    ].join("") + (c.obs || c.confirmar ? `<p class="contato-obs">${esc(c.obs || "Contato tirado de matéria de turismo: confirme antes de pagar.")}</p>` : "");
+  }
   const urlBusca = (q) => `https://www.google.com/search?q=${encodeURIComponent(q)}`;
 
   // ---------- fotos (Wikimedia Commons, carregadas no navegador) ----------
@@ -224,7 +238,8 @@
         <p class="item-texto">${esc(it.texto)}</p>
         ${l ? `<div class="links">
           <button class="pill" data-galeria="${id}">${ICO_FOTO} Fotos</button>
-          <a class="pill" href="${urlMapa(l.mapa)}" target="_blank" rel="noopener">${ICO_PINO} Mapa</a></div>` : ""}
+          <a class="pill" href="${urlMapa(l.mapa)}" target="_blank" rel="noopener">${ICO_PINO} Mapa</a>
+          ${comFoto ? contatoHTML(id) : ""}</div>` : ""}
       </div></li>`;
   }
 
@@ -245,7 +260,8 @@
         <h2 class="secao">${esc(g.grupo)}</h2>
         <div class="card"><ul class="check-lista">
           ${g.itens.map((i) => `<li><label><input type="checkbox" data-id="${esc(i.id)}" ${feito[i.id] ? "checked" : ""}><span>${esc(i.texto)}</span>
-            ${g.editavel ? `<button class="remover" data-remover="${esc(i.id)}" aria-label="Remover">✕</button>` : ""}</label></li>`).join("")}
+            ${g.editavel ? `<button class="remover" data-remover="${esc(i.id)}" aria-label="Remover">✕</button>` : ""}</label>
+            ${i.local ? `<div class="links pend-links">${contatoHTML(i.local)}<a class="pill" href="${urlMapa(LOCAIS[i.local].mapa)}" target="_blank" rel="noopener">${ICO_PINO} Mapa</a></div>` : ""}</li>`).join("")}
         </ul></div>`).join("")}
       <form class="add-form" id="form-pendencia">
         <input id="nova-pendencia" placeholder="Adicionar pendência…" autocomplete="off" aria-label="Nova pendência">
@@ -291,7 +307,8 @@
                 <span class="tag ${ok ? "ok" : "status"}">${ok ? "Garantido" : esc(i.status)}</span></div>
               <p>${esc(i.dica)}</p>
               <div class="acoes">
-                <a class="btn" href="${urlBusca(i.busca)}" target="_blank" rel="noopener">Onde comprar</a>
+                <a class="btn" href="${(CONTATOS[i.local] && CONTATOS[i.local].site) || urlBusca(i.busca)}" target="_blank" rel="noopener">${CONTATOS[i.local] && CONTATOS[i.local].site ? "Comprar no site" : "Onde comprar"}</a>
+                ${CONTATOS[i.local] && CONTATOS[i.local].whatsapp ? `<a class="pill zap" href="https://wa.me/55${esc(CONTATOS[i.local].whatsapp)}" target="_blank" rel="noopener">${ICO_ZAP} WhatsApp</a>` : ""}
                 <button class="pill" data-galeria="${i.local}">${ICO_FOTO} Fotos</button>
                 <button class="btn sec" data-ingresso="${i.id}">${ok ? "Desmarcar" : "Marcar como comprado"}</button>
               </div>

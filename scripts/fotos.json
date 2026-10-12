@@ -1,5 +1,11 @@
 [
  {
+  "id": "vcp",
+  "nome": "Aeroporto de Viracopos",
+  "busca": "Aeroporto Internacional de Viracopos terminal",
+  "pronta": false
+ },
+ {
   "id": "poa",
   "nome": "Aeroporto Salgado Filho",
   "busca": "Aeroporto Salgado Filho terminal",
