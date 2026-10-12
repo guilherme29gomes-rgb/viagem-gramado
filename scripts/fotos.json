@@ -1,0 +1,192 @@
+[
+ {
+  "id": "poa",
+  "nome": "Aeroporto Salgado Filho",
+  "busca": "Aeroporto Internacional Salgado Filho"
+ },
+ {
+  "id": "estrada",
+  "nome": "Estrada BR-116 / RS-115",
+  "busca": "RS-115 Gramado"
+ },
+ {
+  "id": "wish",
+  "nome": "Wish Serrano",
+  "busca": "Wish Serrano Gramado"
+ },
+ {
+  "id": "centro",
+  "nome": "Centro de Gramado",
+  "busca": "Avenida Borges de Medeiros Gramado"
+ },
+ {
+  "id": "parada",
+  "nome": "Parada de Natal – Natal Luz",
+  "busca": "Natal Luz Gramado"
+ },
+ {
+  "id": "etnias",
+  "nome": "Praça das Etnias – Vila de Natal",
+  "busca": "Praça das Etnias Gramado"
+ },
+ {
+  "id": "ruacoberta",
+  "nome": "Rua Coberta",
+  "busca": "Rua Coberta Gramado"
+ },
+ {
+  "id": "galeto",
+  "nome": "Galeto Itália",
+  "busca": "Galeto Itália Gramado"
+ },
+ {
+  "id": "bondinhos",
+  "nome": "Parque Bondinhos Aéreos – Cascata do Caracol",
+  "busca": "Cascata do Caracol"
+ },
+ {
+  "id": "skyglass",
+  "nome": "Skyglass Canela",
+  "busca": "Skyglass Canela"
+ },
+ {
+  "id": "garfo",
+  "nome": "Garfo e Bombacha",
+  "busca": "Garfo e Bombacha Canela"
+ },
+ {
+  "id": "lagonegro",
+  "nome": "Lago Negro",
+  "busca": "Lago Negro Gramado"
+ },
+ {
+  "id": "prawer",
+  "nome": "Fábrica de Chocolate Prawer",
+  "busca": "Prawer chocolate Gramado"
+ },
+ {
+  "id": "fornos",
+  "nome": "Fornos de Gramado",
+  "busca": "Fornos de Gramado Borges de Medeiros"
+ },
+ {
+  "id": "palacio",
+  "nome": "Palácio dos Festivais",
+  "busca": "Palácio dos Festivais Gramado"
+ },
+ {
+  "id": "acquamotion",
+  "nome": "Acquamotion",
+  "busca": "Acquamotion Gramado"
+ },
+ {
+  "id": "hector",
+  "nome": "Hector Pizzaria",
+  "busca": "Hector Pizzaria Borges de Medeiros 1791 Gramado"
+ },
+ {
+  "id": "minimundo",
+  "nome": "Mini Mundo",
+  "busca": "Minimundo Gramado"
+ },
+ {
+  "id": "aldeia",
+  "nome": "Aldeia do Papai Noel",
+  "busca": "Aldeia do Papai Noel Gramado"
+ },
+ {
+  "id": "belavista",
+  "nome": "Café Colonial Bela Vista",
+  "busca": "Café Colonial Bela Vista Gramado"
+ },
+ {
+  "id": "x-snowland",
+  "nome": "Snowland",
+  "busca": "Snowland Gramado"
+ },
+ {
+  "id": "x-ruatorta",
+  "nome": "Rua Torta",
+  "busca": "Rua Torta Gramado"
+ },
+ {
+  "id": "x-joaquina",
+  "nome": "Lago Joaquina Rita Bier",
+  "busca": "Lago Joaquina Rita Bier"
+ },
+ {
+  "id": "x-matriz",
+  "nome": "Igreja Matriz São Pedro",
+  "busca": "Igreja Matriz São Pedro Gramado"
+ },
+ {
+  "id": "x-catedral",
+  "nome": "Catedral de Pedra",
+  "busca": "Catedral de Pedra Canela"
+ },
+ {
+  "id": "x-terramagica",
+  "nome": "Terra Mágica Florybal",
+  "busca": "Terra Mágica Florybal"
+ },
+ {
+  "id": "x-mundovapor",
+  "nome": "Mundo a Vapor",
+  "busca": "Mundo a Vapor Canela"
+ },
+ {
+  "id": "x-alpen",
+  "nome": "Alpen Park",
+  "busca": "Alpen Park Canela"
+ },
+ {
+  "id": "x-gramadozoo",
+  "nome": "GramadoZoo",
+  "busca": "Gramado Zoo"
+ },
+ {
+  "id": "x-dreamland",
+  "nome": "Dreamland – Museu de Cera",
+  "busca": "Museu de Cera Dreamland Gramado"
+ },
+ {
+  "id": "x-supercarros",
+  "nome": "Super Carros / Hollywood Dream Cars",
+  "busca": "Hollywood Dream Cars Gramado"
+ },
+ {
+  "id": "x-lavanda",
+  "nome": "Le Jardin Parque de Lavanda",
+  "busca": "Le Jardin Parque de Lavanda Gramado"
+ },
+ {
+  "id": "x-olivas",
+  "nome": "Olivas de Gramado",
+  "busca": "Olivas de Gramado"
+ },
+ {
+  "id": "x-quilombo",
+  "nome": "Vale do Quilombo",
+  "busca": "Vale do Quilombo Gramado"
+ },
+ {
+  "id": "x-caracol",
+  "nome": "Parque do Caracol (mirante)",
+  "busca": "Parque Estadual do Caracol"
+ },
+ {
+  "id": "x-ferradura",
+  "nome": "Parque da Ferradura",
+  "busca": "Parque da Ferradura Canela"
+ },
+ {
+  "id": "x-castelinho",
+  "nome": "Castelinho Caracol",
+  "busca": "Castelinho Caracol Canela"
+ },
+ {
+  "id": "x-florybal",
+  "nome": "Castelo / Reino do Chocolate",
+  "busca": "Florybal Gramado"
+ }
+]
