@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Roteiro Gramado</title>
+  <meta name="description" content="Roteiro de viagem para Gramado e Canela, de 07 a 12 de novembro.">
+  <meta name="theme-color" content="#7a1f2b">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-conteudo">
+      <p class="topo-sub">07 a 12 de novembro · Gramado e Canela</p>
+      <h1>Roteiro Gramado 🎄</h1>
+      <p class="contagem" id="contagem"></p>
+    </div>
+  </header>
+
+  <main id="app">
+    <section id="aba-roteiro" class="aba ativa" aria-labelledby="tab-roteiro"></section>
+    <section id="aba-pendencias" class="aba" aria-labelledby="tab-pendencias"></section>
+    <section id="aba-ingressos" class="aba" aria-labelledby="tab-ingressos"></section>
+    <section id="aba-extras" class="aba" aria-labelledby="tab-extras"></section>
+    <section id="aba-descontos" class="aba" aria-labelledby="tab-descontos"></section>
+  </main>
+
+  <nav class="abas" role="tablist">
+    <button role="tab" id="tab-roteiro" data-aba="roteiro" aria-selected="true"><span>🗓️</span>Roteiro</button>
+    <button role="tab" id="tab-pendencias" data-aba="pendencias"><span>✅</span>Pendências</button>
+    <button role="tab" id="tab-ingressos" data-aba="ingressos"><span>🎟️</span>Ingressos</button>
+    <button role="tab" id="tab-extras" data-aba="extras"><span>📍</span>Extras</button>
+    <button role="tab" id="tab-descontos" data-aba="descontos"><span>💸</span>Descontos</button>
+  </nav>
+
+  <dialog id="galeria">
+    <div class="galeria-topo">
+      <h2 id="galeria-titulo"></h2>
+      <button class="fechar" aria-label="Fechar">✕</button>
+    </div>
+    <div id="galeria-fotos" class="galeria-fotos"></div>
+    <p class="galeria-links" id="galeria-links"></p>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
