@@ -16,7 +16,31 @@
 
   const urlMapa = (q) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
   const urlGoogleFotos = (q) => `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(q)}`;
-  const marca = (l) => `<span class="monograma" aria-hidden="true">${esc(l.nome.charAt(0))}</span>`;
+  const ICONES = {
+    aviao: '<path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/>',
+    carro: '<path d="M5 17h14v-5l-2-5H7l-2 5z"/><path d="M5 12h14M7 17v2M17 17v2"/><circle cx="8.5" cy="14.5" r=".8"/><circle cx="15.5" cy="14.5" r=".8"/>',
+    hotel: '<path d="M3 20V8l9-5 9 5v12"/><path d="M9.5 20v-5h5v5"/><path d="M8 10h.01M12 10h.01M16 10h.01"/>',
+    arvore: '<path d="M12 2.5l5 7h-3l4.5 6.5h-13L10 9.5H7z"/><path d="M12 16v5"/>',
+    estrela: '<path d="M12 3l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L12 16.4l-5.3 2.9 1.1-5.9-4.4-4.1 6-.8z"/>',
+    presente: '<rect x="4" y="9" width="16" height="11" rx="1"/><path d="M3 9h18M12 9v11"/><path d="M12 9C10.5 5.5 7 5 7 7.2 7 9 12 9 12 9s5 0 5-1.8C17 5 13.5 5.5 12 9z"/>',
+    garfo: '<path d="M6 3v6a2 2 0 0 0 4 0V3M8 11v10"/><path d="M17 21V3c-2 1.5-3 4-3 8h3"/>',
+    bondinho: '<path d="M3 5.5L21 3"/><path d="M12 4.3V8"/><rect x="6" y="8" width="12" height="11" rx="2"/><path d="M6 13h12M12 13v6"/>',
+    montanha: '<path d="M2.5 20l6.5-12 4 6.5 3-4 5.5 9.5z"/>',
+    lago: '<path d="M3 15c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M3 19c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M9 11c0-2.5 1.5-4 3.5-4S16 8.5 16 11"/>',
+    cafe: '<path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3.5v3M12 3.5v3"/>',
+    onda: '<path d="M3 18c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M8 14c-1-2 1-3 0-6M12 14c-1-2 1-3 0-6M16 14c-1-2 1-3 0-6"/>',
+    castelo: '<path d="M4 20V9h3V6h2v3h2V6h2v3h2V6h2v3h3v11z"/><path d="M10 20v-4h4v4"/>',
+    pin: '<path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/>',
+    igreja: '<path d="M12 2v4M10 4h4"/><path d="M6 21V11l6-5 6 5v10z"/><path d="M10 21v-4h4v4"/>',
+    flor: '<circle cx="12" cy="8.5" r="2.2"/><path d="M12 6.3c0-3 3.5-3 2.5-.3M14.2 8.5c3 0 3 3.5.3 2.5M12 10.7c0 3-3.5 3-2.5.3M9.8 8.5c-3 0-3-3.5-.3-2.5"/><path d="M12 11v10M12 17c-2-2-4.5-1.5-4.5-1.5M12 18c2-2 4.5-1.5 4.5-1.5"/>',
+    museu: '<path d="M3 9l9-5 9 5"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/>',
+    trem: '<rect x="5" y="3.5" width="14" height="13" rx="3"/><path d="M5 10.5h14M9 19.5l-2 2M15 19.5l2 2"/><circle cx="9" cy="13.5" r=".8"/><circle cx="15" cy="13.5" r=".8"/>',
+    neve: '<path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"/><path d="M9.5 4.5L12 6l2.5-1.5M9.5 19.5L12 18l2.5 1.5"/>',
+  };
+  const icone = (l) => `<span class="icone-local" aria-hidden="true"><svg viewBox="0 0 24 24">${ICONES[l.tipo] || ICONES.pin}</svg></span>`;
+  // Capa com foto: só aparece quando as fotos podem ser carregadas.
+  const capaHTML = (l, id) => fotosOnline && l.foto
+    ? `<div class="capa" data-foto="${esc(l.foto)}" data-galeria="${id}">${icone(l)}<span class="ver-fotos">${ICO_FOTO} fotos</span></div>` : "";
   const ICO_FOTO = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>`;
   const ICO_PINO = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg>`;
   const urlBusca = (q) => `https://www.google.com/search?q=${encodeURIComponent(q)}`;
@@ -179,10 +203,10 @@
 
   function blocoHTML(it, l, id, comFoto) {
     return `<li class="bloco${l ? "" : " simples"}">
-      ${comFoto ? `<div class="capa" data-foto="${esc(l.foto || "")}" data-galeria="${id}">${marca(l)}<span class="ver-fotos">${ICO_FOTO} fotos</span></div>` : ""}
+      ${comFoto ? capaHTML(l, id) : ""}
       <div class="bloco-corpo">
         <p class="hora">${esc(it.hora)}${it.extra ? ` <span class="tag kids">adicionado</span>` : ""}</p>
-        ${l ? `<h3 class="bloco-local">${esc(l.nome)}</h3>` : ""}
+        ${l ? `<div class="titulo-local">${icone(l)}<h3 class="bloco-local">${esc(l.nome)}</h3></div>` : ""}
         <p class="item-texto">${esc(it.texto)}</p>
         ${l ? `<div class="links">
           <button class="pill" data-galeria="${id}">${ICO_FOTO} Fotos</button>
@@ -246,14 +270,15 @@
           const l = LOCAIS[i.local];
           const ok = comprados[i.id];
           return `<article class="card">
-            <div class="capa" data-foto="${esc(l.foto || "")}" data-galeria="${i.local}">${marca(l)}<span class="ver-fotos">${ICO_FOTO} fotos</span></div>
+            ${capaHTML(l, i.local)}
             <div class="corpo">
-              <h3>${esc(l.nome)}</h3>
+              <div class="titulo-local">${icone(l)}<h3>${esc(l.nome)}</h3></div>
               <div class="meta"><span class="tag">${esc(i.dia)}</span>
                 <span class="tag ${ok ? "ok" : "status"}">${ok ? "Garantido" : esc(i.status)}</span></div>
               <p>${esc(i.dica)}</p>
               <div class="acoes">
                 <a class="btn" href="${urlBusca(i.busca)}" target="_blank" rel="noopener">Onde comprar</a>
+                <button class="pill" data-galeria="${i.local}">${ICO_FOTO} Fotos</button>
                 <button class="btn sec" data-ingresso="${i.id}">${ok ? "Desmarcar" : "Marcar como comprado"}</button>
               </div>
             </div></article>`;
@@ -287,15 +312,16 @@
       </div>
       <div class="grade">
         ${lista.map((x) => `<article class="card">
-          <div class="capa" data-foto="${esc(x.foto)}" data-galeria="${x.id}">${marca(x)}<span class="ver-fotos">${ICO_FOTO} fotos</span></div>
+          ${capaHTML(x, x.id)}
           <div class="corpo">
-            <h3>${esc(x.nome)}</h3>
+            <div class="titulo-local">${icone(x)}<h3>${esc(x.nome)}</h3></div>
             <div class="meta"><span class="tag">${esc(x.cidade)}</span>${x.kids ? `<span class="tag kids">bom com criança</span>` : ""}</div>
             <p>${esc(x.dica)}</p>
             <div class="acoes">
               <select data-extra="${x.id}" aria-label="Incluir ${esc(x.nome)} no roteiro" class="pill">
                 <option value="">Incluir no dia…</option>${opcoesDia}
               </select>
+              <button class="pill" data-galeria="${x.id}">${ICO_FOTO} Fotos</button>
               <a class="pill" href="${urlMapa(x.mapa)}" target="_blank" rel="noopener">${ICO_PINO} Mapa</a>
             </div>
           </div></article>`).join("")}
@@ -316,13 +342,53 @@
     ativarFotos(sec);
   }
 
+  // ---------- Mala ----------
+  let malaAtual = store.get("mala-secao", MALA[0].id);
+  function renderMala() {
+    const sec = $("#aba-mala");
+    const feito = store.get("mala", {});
+    const atual = MALA.find((m) => m.id === malaAtual) || MALA[0];
+    const contar = (m) => {
+      let total = 0, ok = 0;
+      m.grupos.forEach((g, gi) => g.itens.forEach((_, ii) => { total++; if (feito[`${m.id}-${gi}-${ii}`]) ok++; }));
+      return { total, ok };
+    };
+    const c = contar(atual);
+
+    sec.innerHTML = `
+      <h2 class="secao">Mala</h2>
+      <p class="intro">Sugestão para 6 dias na serra em novembro: noites por volta de 10°C, dias até 25°C e chance de chuva.</p>
+      <div class="segmentos" role="group" aria-label="Seção da mala">
+        ${MALA.map((m) => { const n = contar(m); return `<button data-mala="${m.id}" aria-pressed="${m.id === atual.id}">
+          ${esc(m.nome)}<small>${n.ok}/${n.total}</small></button>`; }).join("")}
+      </div>
+      <div class="progresso"><div style="width:${c.total ? (c.ok / c.total) * 100 : 0}%"></div></div>
+      <p class="progresso-txt">${c.ok} de ${c.total} itens na mala</p>
+      ${atual.grupos.map((g, gi) => `
+        <h3 class="subsecao">${esc(g.titulo)}</h3>
+        <div class="card"><ul class="check-lista">
+          ${g.itens.map((t, ii) => { const id = `${atual.id}-${gi}-${ii}`; return `<li><label>
+            <input type="checkbox" data-id="${id}" ${feito[id] ? "checked" : ""}><span>${esc(t)}</span></label></li>`; }).join("")}
+        </ul></div>`).join("")}`;
+
+    sec.querySelectorAll("[data-mala]").forEach((b) => b.addEventListener("click", () => {
+      malaAtual = b.dataset.mala;
+      store.set("mala-secao", malaAtual);
+      renderMala();
+    }));
+    sec.querySelectorAll("input[type=checkbox]").forEach((cb) => cb.addEventListener("change", () => {
+      feito[cb.dataset.id] = cb.checked;
+      store.set("mala", feito);
+      renderMala();
+    }));
+  }
+
   // ---------- Descontos ----------
   function renderDescontos() {
     $("#aba-descontos").innerHTML = `
       <h2 class="secao">Apps e sites de desconto</h2>
       <div class="app-lista">
         ${APPS.map((a) => `<a class="card app-item" href="${esc(a.link)}" target="_blank" rel="noopener">
-          <span class="app-ico">${marca(a)}</span>
           <div><h3>${esc(a.nome)} <span class="tag">${esc(a.cat)}</span></h3><p>${esc(a.desc)}</p></div></a>`).join("")}
       </div>
       <h2 class="secao">Dicas para economizar</h2>
@@ -345,6 +411,7 @@
   renderPendencias();
   renderIngressos();
   renderExtras();
+  renderMala();
   renderDescontos();
   mostrarAba(store.get("aba", "roteiro"));
 

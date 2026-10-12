@@ -6,6 +6,7 @@ App de roteiro da viagem a Gramado e Canela (07 a 12/11/2026). Funciona no naveg
 
 - **Roteiro** — dia a dia, com fotos de cada lugar (Wikimedia Commons), link para o mapa e mais fotos no Google.
 - **Pendências** — checklist do que resolver antes e durante a viagem. Dá para adicionar itens próprios.
+- **Mala** — sugestão de mala separada em Bebês, Pais e Bagagem de mão, com checklist.
 - **Ingressos** — o que comprar/reservar antecipado, com marcação de "comprado".
 - **Extras** — lugares fora do roteiro; escolha um dia e eles entram no roteiro.
 - **Descontos** — apps e sites para economizar.
