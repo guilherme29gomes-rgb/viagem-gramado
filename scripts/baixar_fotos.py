@@ -87,7 +87,7 @@ def buscar_site(site):
         if u in vistos or re.search(r"logo|icon|favicon|sprite|whats|selo|banner-mobile", u, re.I):
             continue
         vistos.append(u)
-    for u in vistos[:6]:
+    for u in vistos[:10]:
         yield {"url": u, "pagina": site, "titulo": "Imagem do site oficial", "autor": "Divulgação", "licenca": "site oficial"}
 
 

@@ -21,16 +21,17 @@
   "id": "wish",
   "nome": "Wish Serrano",
   "busca": "Wish Serrano Gramado",
-  "pronta": true,
+  "pronta": false,
   "fonte": "site",
   "buscas": [
    "Wish Serrano Gramado",
    "Serrano Resort Gramado"
   ],
   "sites": [
-   "https://www.wishhotels.com.br/",
-   "https://www.wishhotels.com/",
-   "https://wishserrano.com.br/"
+   "https://grupowish.com/wish-serrano",
+   "https://grupowish.com/pt/wish-serrano",
+   "https://grupowish.com/en/wish-serrano-programacao",
+   "https://www.grupowish.com/en/hoteis"
   ]
  },
  {
