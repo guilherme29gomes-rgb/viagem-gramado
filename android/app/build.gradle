@@ -1,0 +1,16 @@
+plugins {
+    id "com.android.application"
+}
+
+android {
+    namespace "br.gramado.roteiro"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "br.gramado.roteiro"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+}
