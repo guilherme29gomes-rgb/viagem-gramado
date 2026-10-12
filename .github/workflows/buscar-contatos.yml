@@ -1,0 +1,33 @@
+name: Buscar contatos dos locais
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/buscar_contatos.py"
+      - ".github/workflows/buscar-contatos.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: buscar-contatos
+  cancel-in-progress: true
+
+jobs:
+  contatos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/buscar_contatos.py
+      - name: Salvar no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add contatos
+          git commit -m "Contatos encontrados nos sites dos locais" || exit 0
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
