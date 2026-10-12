@@ -320,23 +320,25 @@ const MALA = [
   ]},
 ];
 
-// Contatos para reservas e ingressos. Fontes: sites oficiais e matérias de
-// turismo (2024–2026). "confirmar": número tirado de matéria antiga.
+// Contatos para reservas e ingressos. Instagram e WhatsApp tirados dos sites
+// oficiais (outubro de 2026), exceto onde há "obs".
 const CONTATOS = {
-  wish: { site: "https://grupowish.com/", obs: "O WhatsApp de reservas fica no site do Grupo Wish" },
-  galeto: { site: "https://www.galetoitalia.com.br/", telefone: "(54) 3286-3375" },
-  garfo: { obs: "Sem site ou WhatsApp confirmados: veja o contato na ficha do Google Maps" },
-  hector: { obs: "Sem site ou WhatsApp confirmados: veja o contato na ficha do Google Maps" },
-  belavista: { site: "https://www.belavista.tur.br/", telefone: "(54) 3286-2097", whatsapp: "5432861608", confirmar: true },
-  bondinhos: { whatsapp: "54992061225", confirmar: true },
-  skyglass: { site: "https://www.skyglasscanela.com.br/", telefone: "(54) 3699-9200" },
-  prawer: { obs: "Sem contato confirmado: veja na ficha do Google Maps" },
-  acquamotion: { site: "https://www.acquamotion.com.br/", whatsapp: "5430501700", telefone: "0800 800 3737", confirmar: true },
-  minimundo: { site: "https://www.minimundo.com.br/", whatsapp: "5432864055" },
-  aldeia: { obs: "Sem contato confirmado: veja na ficha do Google Maps" },
-  parada: { site: "https://www.natalluzdegramado.com.br/" },
-  "x-supercarros": { site: "https://www.supercarros.com.br/" },
-  "x-olivas": { site: "https://www.olivasdegramado.com.br/" },
-  carrinho: { site: "https://casadoviajante.com.br/", whatsapp: "54991119260",
-    obs: "Entrega e retira no hotel. Diária a partir de ~R$ 50 (preço de 2025). Também aluga berço portátil e bebê conforto. Outras opções: @babygramadoalugueis e @aluga_tur no Instagram, ou a AirCloset no Laçador de Ofertas." },
+  wish: { site: "https://grupowish.com/", instagram: "wishresorts", obs: "O WhatsApp de reservas aparece no site do Grupo Wish" },
+  galeto: { site: "https://www.galetoitalia.com.br/", instagram: "galetoitaliagramado", whatsapp: "5432863375", telefone: "(54) 3286-3375" },
+  garfo: { site: "https://www.garfoebombacha.com.br/", instagram: "garfoebombacha" },
+  hector: { instagram: "hectordragao", obs: "Instagram citado em blog de viagem; sem site oficial encontrado" },
+  belavista: { site: "https://www.belavista.tur.br/", whatsapp: "5432861608", telefone: "(54) 3286-2097" },
+  bondinhos: { site: "https://www.bondinhoscanela.com.br/", instagram: "bondinhoscanela", whatsapp: "54992061225" },
+  skyglass: { site: "https://www.skyglasscanela.com.br/", instagram: "skyglasscanela", whatsapp: "5436999200" },
+  prawer: { site: "https://www.prawer.com.br/", instagram: "prawerchocolates", whatsapp: "54999198213" },
+  acquamotion: { site: "https://www.acquamotion.com.br/", instagram: "acquamotion", whatsapp: "5430501720" },
+  minimundo: { site: "https://www.minimundo.com.br/", instagram: "minimundogramado", whatsapp: "5432864055" },
+  aldeia: { site: "https://www.aldeiadopapainoel.com.br/", whatsapp: "54991293431" },
+  parada: { site: "https://www.natalluzdegramado.com.br/", instagram: "natalluzoficial", whatsapp: "5436989575" },
+  fornos: { obs: "Sem site nem Instagram: só dinheiro, pague no balcão" },
+  "x-supercarros": { site: "https://www.supercarros.com.br/", instagram: "supercarros", whatsapp: "54981400063" },
+  "x-olivas": { site: "https://www.olivasdegramado.com.br/", instagram: "olivasdegramado", whatsapp: "54996107626" },
+  "x-snowland": { site: "https://www.snowland.com.br/", instagram: "snowlandgramado", whatsapp: "5430501720" },
+  carrinho: { site: "https://casadoviajante.com.br/", instagram: "casadoviajanteoficial", whatsapp: "54991119260",
+    obs: "Entrega e retira no hotel. Diária a partir de ~R$ 50 (preço de 2025). Também aluga berço portátil e bebê conforto. Outras opções no Instagram: @babygramadoalugueis e @aluga_tur." },
 };

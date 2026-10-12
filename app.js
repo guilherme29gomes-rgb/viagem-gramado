@@ -311,6 +311,7 @@
               <div class="acoes">
                 <a class="btn" href="${(CONTATOS[i.local] && CONTATOS[i.local].site) || urlBusca(i.busca)}" target="_blank" rel="noopener">${CONTATOS[i.local] && CONTATOS[i.local].site ? "Comprar no site" : "Onde comprar"}</a>
                 ${CONTATOS[i.local] && CONTATOS[i.local].whatsapp ? `<a class="pill zap" href="https://wa.me/55${esc(CONTATOS[i.local].whatsapp)}" target="_blank" rel="noopener">${ICO_ZAP} WhatsApp</a>` : ""}
+                ${CONTATOS[i.local] && CONTATOS[i.local].instagram ? `<a class="pill insta" href="https://www.instagram.com/${esc(CONTATOS[i.local].instagram)}/" target="_blank" rel="noopener">${ICO_INSTA} Instagram</a>` : ""}
                 <button class="pill" data-galeria="${i.local}">${ICO_FOTO} Fotos</button>
                 <button class="btn sec" data-ingresso="${i.id}">${ok ? "Desmarcar" : "Marcar como comprado"}</button>
               </div>
@@ -356,6 +357,7 @@
               </select>
               <button class="pill" data-galeria="${x.id}">${ICO_FOTO} Fotos</button>
               <a class="pill" href="${urlMapa(x.mapa)}" target="_blank" rel="noopener">${ICO_PINO} Mapa</a>
+              ${contatoHTML(x.id)}
             </div>
           </div></article>`).join("")}
       </div>`;
