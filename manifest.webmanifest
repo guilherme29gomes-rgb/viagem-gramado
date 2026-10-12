@@ -1,5 +1,6 @@
 {
   "name": "Roteiro Gramado",
+  "id": "roteiro-gramado-v2",
   "short_name": "Gramado",
   "start_url": "./",
   "display": "standalone",
@@ -7,8 +8,8 @@
   "theme_color": "#ffffff",
   "lang": "pt-BR",
   "icons": [
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
-    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icone-branco-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icone-branco-180.png", "sizes": "180x180", "type": "image/png" },
     { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
   ]
 }
