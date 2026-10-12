@@ -129,7 +129,7 @@
   "id": "fornos",
   "nome": "Fornos de Gramado",
   "busca": "Fornos de Gramado",
-  "pronta": false,
+  "pronta": true,
   "fonte": "site",
   "buscas": [
    "Fornos de Gramado",
@@ -205,7 +205,7 @@
   "id": "x-ruatorta",
   "nome": "Rua Torta",
   "busca": "Rua Torta Gramado",
-  "pronta": false,
+  "pronta": true,
   "fonte": "site",
   "sites": [
    "https://www.buser.com.br/destinos/pontos-turisticos/rs/gramado/rua-torta-de-gramado",

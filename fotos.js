@@ -170,5 +170,15 @@ window.FOTOS_LOCAIS = {
   "pagina": "https://grupowish.com/",
   "credito": "Divulgação Grupo Wish",
   "pequena": true
+ },
+ "x-ruatorta": {
+  "src": "fotos/x-ruatorta.jpg",
+  "pagina": "https://www.essemundoenosso.com.br/?p=60590",
+  "credito": "Blog Esse Mundo É Nosso"
+ },
+ "fornos": {
+  "src": "fotos/fornos.jpg",
+  "pagina": "https://wanderlog.com/place/details/7244812/fornos-de-gramado",
+  "credito": "Foto via Wanderlog"
  }
 };

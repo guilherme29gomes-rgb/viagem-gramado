@@ -128,7 +128,7 @@
     $("#galeria-titulo").textContent = lugar.nome;
     const box = $("#galeria-fotos");
     const salva = fotoDe(lugar);
-    const figura = (src, link, credito) => `<figure><img src="${esc(src)}" alt="${esc(lugar.nome)}" loading="lazy"><figcaption>${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">${link.includes("wikimedia") ? "Wikimedia Commons" : link.includes("flickr") ? "Flickr" : "Site oficial"}</a>` : ""}${credito ? " · " + esc(credito) : ""}</figcaption></figure>`;
+    const figura = (src, link, credito) => `<figure><img src="${esc(src)}" alt="${esc(lugar.nome)}" loading="lazy"><figcaption>${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">${link.includes("wikimedia") ? "Wikimedia Commons" : link.includes("flickr") ? "Flickr" : "Fonte"}</a>` : ""}${credito ? " · " + esc(credito) : ""}</figcaption></figure>`;
     const primeira = salva ? figura(salva.src, salva.pagina, salva.credito) : "";
     box.innerHTML = primeira || (lugar.foto ? `<p class="vazio">Carregando fotos…</p>` : "");
     $("#galeria-links").innerHTML = `
