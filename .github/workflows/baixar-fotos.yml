@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: baixar-fotos
+  cancel-in-progress: true
+
 jobs:
   fotos:
     runs-on: ubuntu-latest
@@ -25,5 +29,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add fotos
-          git commit -m "Fotos candidatas dos locais (Wikimedia Commons)" || echo "nada novo"
-          git push
+          git commit -m "Fotos candidatas dos locais (Wikimedia Commons)" || exit 0
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
