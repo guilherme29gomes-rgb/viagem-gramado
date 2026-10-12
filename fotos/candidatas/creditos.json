@@ -166,5 +166,251 @@
   "titulo": "File:Florybal Gramado.jpg",
   "autor": "Lenny Maidana",
   "licenca": "CC BY-SA 4.0"
+ },
+ "estrada-o1.jpg": {
+  "url": "https://api.openverse.org/v1/images/30f1f94e-7c56-4e36-ac0f-0012148c8d71/thumb/",
+  "pagina": "https://www.flickr.com/photos/13723429@N03/5897994340",
+  "titulo": "Pelos caminhos do Sul",
+  "autor": "Claudio Arriens",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "estrada-o2.jpg": {
+  "url": "https://api.openverse.org/v1/images/7aed5688-12ba-43eb-9d46-66565b37e93d/thumb/",
+  "pagina": "https://www.flickr.com/photos/29039641@N02/3618484362",
+  "titulo": "SERRA GAÚCHA",
+  "autor": "PAULO BROCKMANN",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "estrada-o3.jpg": {
+  "url": "https://api.openverse.org/v1/images/c5f43787-4407-49bf-9925-a81e1d7725c9/thumb/",
+  "pagina": "https://www.flickr.com/photos/34832284@N00/465423192",
+  "titulo": "shiny road",
+  "autor": "Fabrício Marcon",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "etnias-o1.jpg": {
+  "url": "https://api.openverse.org/v1/images/dcabe906-84fb-4f6e-a975-3501c2f98eeb/thumb/",
+  "pagina": "https://www.flickr.com/photos/27874578@N06/18494814715",
+  "titulo": "Praça das Etnias - Gramado #1",
+  "autor": "Felipe Valduga",
+  "licenca": "CC BY 2.0",
+  "fonte": "flickr"
+ },
+ "etnias-o2.jpg": {
+  "url": "https://api.openverse.org/v1/images/d6238608-8ee5-4e0e-a1ad-84fc21955ce3/thumb/",
+  "pagina": "https://www.flickr.com/photos/27874578@N06/18490451152",
+  "titulo": "Praça das Etnias - Gramado #2",
+  "autor": "Felipe Valduga",
+  "licenca": "CC BY 2.0",
+  "fonte": "flickr"
+ },
+ "skyglass-o2.jpg": {
+  "url": "https://api.openverse.org/v1/images/28b55000-2ae6-4c74-b7a8-c3b2dba2fc21/thumb/",
+  "pagina": "https://www.flickr.com/photos/57096889@N00/3223349019",
+  "titulo": "urban surfaces: skyglass",
+  "autor": "SheaAk",
+  "licenca": "CC BY-ND 2.0",
+  "fonte": "flickr"
+ },
+ "skyglass-o3.jpg": {
+  "url": "https://api.openverse.org/v1/images/8bc4d4d0-f119-4986-b8e4-6c2a1d070802/thumb/",
+  "pagina": "https://www.flickr.com/photos/23379857@N00/1381999",
+  "titulo": "Skyglasses",
+  "autor": "tomswift46 ( Hi Res Images for Sale)",
+  "licenca": "CC BY-NC 2.0",
+  "fonte": "flickr"
+ },
+ "skyglass-o4.jpg": {
+  "url": "https://api.openverse.org/v1/images/ebb63752-0b09-4b9f-b223-2ecab2db1709/thumb/",
+  "pagina": "https://www.flickr.com/photos/70561184@N00/316927830",
+  "titulo": "Skyglasses",
+  "autor": "Andrei Z",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "garfo-o1.jpg": {
+  "url": "https://api.openverse.org/v1/images/2d6fa533-343a-4b0f-9c0d-dc1e4d81d44d/thumb/",
+  "pagina": "https://www.flickr.com/photos/39558803@N00/20948840592",
+  "titulo": "Noite Gaúcha - Churrascaria Garfo e Bombacha",
+  "autor": "Carlos Varela",
+  "licenca": "CC BY 2.0",
+  "fonte": "flickr"
+ },
+ "garfo-o2.jpg": {
+  "url": "https://api.openverse.org/v1/images/24a4edb4-8cf7-491d-9ae3-29c7aa6bcf15/thumb/",
+  "pagina": "https://www.flickr.com/photos/39558803@N00/20338903893",
+  "titulo": "Noite Gaúcha - Churrascaria Garfo e Bombacha",
+  "autor": "Carlos Varela",
+  "licenca": "CC BY 2.0",
+  "fonte": "flickr"
+ },
+ "garfo-o3.jpg": {
+  "url": "https://api.openverse.org/v1/images/0abc6d49-c37f-4c20-8dd5-0e230aec356f/thumb/",
+  "pagina": "https://www.flickr.com/photos/39558803@N00/20932426036",
+  "titulo": "Noite Gaúcha - Churrascaria Garfo e Bombacha",
+  "autor": "Carlos Varela",
+  "licenca": "CC BY 2.0",
+  "fonte": "flickr"
+ },
+ "garfo-o4.jpg": {
+  "url": "https://api.openverse.org/v1/images/0ccbb2a5-1d86-4ead-b4b4-82088655fd8b/thumb/",
+  "pagina": "https://www.flickr.com/photos/7453375@N06/4784072419",
+  "titulo": "Churrasco gaúcho",
+  "autor": "Ander Vaz",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "garfo-o5.jpg": {
+  "url": "https://api.openverse.org/v1/images/ae0be480-abb3-4565-8ddb-4b06f2ff30e2/thumb/",
+  "pagina": "https://www.flickr.com/photos/21855999@N04/3179784746",
+  "titulo": "Churrasco gaúcho",
+  "autor": "veredaestreita",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "garfo-o6.jpg": {
+  "url": "https://api.openverse.org/v1/images/1b7ad80a-687d-4cf6-829d-4ab597fe09c0/thumb/",
+  "pagina": "https://www.flickr.com/photos/21855999@N04/3179782936",
+  "titulo": "Churrasco gaúcho",
+  "autor": "veredaestreita",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "prawer-o1.jpg": {
+  "url": "https://api.openverse.org/v1/images/cb9f8916-67ec-4b33-bf81-4054e5fd8cce/thumb/",
+  "pagina": "https://www.flickr.com/photos/29853282@N06/3812508869",
+  "titulo": "Kikitos de chocolate",
+  "autor": "lidifaria",
+  "licenca": "CC BY-NC 2.0",
+  "fonte": "flickr"
+ },
+ "prawer-o2.jpg": {
+  "url": "https://api.openverse.org/v1/images/15deabcb-321a-4ac1-9d20-234880f3dce0/thumb/",
+  "pagina": "https://www.flickr.com/photos/20646732@N00/8333682909",
+  "titulo": "DSC_0099",
+  "autor": "MarvinMep",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "prawer-o3.jpg": {
+  "url": "https://api.openverse.org/v1/images/1b3e1a1e-b829-448e-a3ed-af9c9ab7355d/thumb/",
+  "pagina": "https://www.flickr.com/photos/8550860@N06/11876666364",
+  "titulo": "Cute coffee service at Prawer (in Gramado)",
+  "autor": "the tablehopper",
+  "licenca": "CC BY-NC-ND 2.0",
+  "fonte": "flickr"
+ },
+ "prawer-o4.jpg": {
+  "url": "https://api.openverse.org/v1/images/cb9f8916-67ec-4b33-bf81-4054e5fd8cce/thumb/",
+  "pagina": "https://www.flickr.com/photos/29853282@N06/3812508869",
+  "titulo": "Kikitos de chocolate",
+  "autor": "lidifaria",
+  "licenca": "CC BY-NC 2.0",
+  "fonte": "flickr"
+ },
+ "prawer-o5.jpg": {
+  "url": "https://api.openverse.org/v1/images/15deabcb-321a-4ac1-9d20-234880f3dce0/thumb/",
+  "pagina": "https://www.flickr.com/photos/20646732@N00/8333682909",
+  "titulo": "DSC_0099",
+  "autor": "MarvinMep",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "fornos-o1.jpg": {
+  "url": "https://api.openverse.org/v1/images/c5afd81a-d4f0-4d29-ba13-408b104f1deb/thumb/",
+  "pagina": "https://www.flickr.com/photos/46116150@N02/5291578456",
+  "titulo": "Padeiro",
+  "autor": "diegodobelo",
+  "licenca": "CC BY-SA 2.0",
+  "fonte": "flickr"
+ },
+ "fornos-o2.jpg": {
+  "url": "https://api.openverse.org/v1/images/b5750edf-f1ff-46e3-a9b5-bdd79227ac90/thumb/",
+  "pagina": "https://www.flickr.com/photos/11641695@N06/9725490893",
+  "titulo": "Uma cuca genuinamente alemã e o melhor, agroecológica, desde a resistência em #Wendland. Também conhecida como republica livre! Localiza-se entre a entao Alemanha oriental e ocidental #germany #travel",
+  "autor": "Cintia Barenho",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "hector-o1.jpg": {
+  "url": "https://api.openverse.org/v1/images/6ccb0077-5614-41d6-8ada-d7f682515b42/thumb/",
+  "pagina": "https://www.flickr.com/photos/35474657@N05/3942715391",
+  "titulo": "Pizzaria Toca da Bruxa",
+  "autor": "joenio",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "x-ruatorta-1.jpg": {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Brazilian_flag_in_Gramado.jpg/960px-Brazilian_flag_in_Gramado.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Brazilian_flag_in_Gramado.jpg",
+  "titulo": "File:Brazilian flag in Gramado.jpg",
+  "autor": "Heylenny",
+  "licenca": "CC BY-SA 4.0"
+ },
+ "x-ruatorta-2.jpg": {
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Flowered_street.jpg/960px-Flowered_street.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Flowered_street.jpg",
+  "titulo": "File:Flowered street.jpg",
+  "autor": "Felipe Valduga",
+  "licenca": "CC BY 2.0"
+ },
+ "x-alpen-o1.jpg": {
+  "url": "https://api.openverse.org/v1/images/8fa71e4e-d5ac-4f20-a359-5d483c3914e7/thumb/",
+  "pagina": "https://www.flickr.com/photos/63562921@N00/3847311174",
+  "titulo": "Trenó",
+  "autor": "Cristian Janke",
+  "licenca": "CC BY-SA 2.0",
+  "fonte": "flickr"
+ },
+ "x-alpen-o2.jpg": {
+  "url": "https://api.openverse.org/v1/images/ab21712b-69e6-46a4-8aa5-a49915dc9f88/thumb/",
+  "pagina": "https://www.flickr.com/photos/93926069@N08/15086302797",
+  "titulo": "hdr catedral canela",
+  "autor": "marcos.pegorini",
+  "licenca": "CC BY-NC 2.0",
+  "fonte": "flickr"
+ },
+ "x-alpen-o3.jpg": {
+  "url": "https://api.openverse.org/v1/images/ecfe1533-d022-457d-81b8-7076cc1291d0/thumb/",
+  "pagina": "https://www.flickr.com/photos/135218038@N06/20229095743",
+  "titulo": "287- Alpen Park",
+  "autor": "Augusto08",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "x-alpen-o4.jpg": {
+  "url": "https://api.openverse.org/v1/images/98bec56d-e0a0-44b1-a387-03c4d8dc3fb1/thumb/",
+  "pagina": "https://www.flickr.com/photos/85482474@N00/4467851857",
+  "titulo": "alpen park",
+  "autor": "R. Seiji",
+  "licenca": "CC BY-NC-ND 2.0",
+  "fonte": "flickr"
+ },
+ "x-alpen-o5.jpg": {
+  "url": "https://api.openverse.org/v1/images/ecfe1533-d022-457d-81b8-7076cc1291d0/thumb/",
+  "pagina": "https://www.flickr.com/photos/135218038@N06/20229095743",
+  "titulo": "287- Alpen Park",
+  "autor": "Augusto08",
+  "licenca": "CC BY-NC-SA 2.0",
+  "fonte": "flickr"
+ },
+ "x-alpen-o6.jpg": {
+  "url": "https://api.openverse.org/v1/images/cd4fd066-df0b-4924-92f4-66690ee19bfe/thumb/",
+  "pagina": "https://www.flickr.com/photos/31191642@N05/4946401988",
+  "titulo": "Königssee 'King's Lake'",
+  "autor": "Sergiu Bacioiu",
+  "licenca": "CC BY-NC 2.0",
+  "fonte": "flickr"
+ },
+ "x-supercarros-o1.jpg": {
+  "url": "https://api.openverse.org/v1/images/b5ac8bd4-442e-4672-a4a8-3e6444a56223/thumb/",
+  "pagina": "https://www.flickr.com/photos/52957932@N00/3828792998",
+  "titulo": "Cadillac badge bokeh",
+  "autor": "poperotico",
+  "licenca": "CC BY-NC 2.0",
+  "fonte": "flickr"
  }
 }
