@@ -10,6 +10,7 @@ const VIAGEM = {
 
 const LOCAIS = {
   vcp: { tipo: "aviao", nome: "Aeroporto de Viracopos (Campinas)", foto: "Aeroporto Internacional de Viracopos", mapa: "Aeroporto Internacional de Viracopos Campinas", emoji: "✈️" },
+  carrinho: { tipo: "presente", nome: "Casa do Viajante (aluguel de carrinho de bebê)", foto: null, mapa: "Casa do Viajante Av. Borges de Medeiros 2300 Gramado", emoji: "👶" },
   poa: { tipo: "aviao", nome: "Aeroporto Salgado Filho (Porto Alegre)", foto: "Aeroporto Internacional Salgado Filho", mapa: "Aeroporto Internacional Salgado Filho Porto Alegre", emoji: "✈️" },
   estrada: { tipo: "carro", nome: "Estrada BR-116 / RS-115", foto: "RS-115 Gramado", mapa: "RS-115 Gramado", emoji: "🚗" },
   wish: { tipo: "hotel", nome: "Wish Serrano", foto: "Wish Serrano Gramado", mapa: "Wish Serrano Resort Gramado", emoji: "🏨" },
@@ -115,6 +116,7 @@ const PENDENCIAS = [
     { id: "cadeirinha", texto: "Decidir: levar a própria cadeirinha ou alugar na locadora" },
     { id: "doc-crianca", texto: "Separar documento da criança (RG ou certidão) — exigido no voo e no Acquamotion" },
     { id: "cnh", texto: "CNH válida e cartão de crédito no nome do motorista (caução da locadora)" },
+    { id: "carrinho-aluguel", local: "carrinho", texto: "Reservar carrinho de bebê alugado com entrega no Wish Serrano (se não levar o seu). Em alta temporada esgota" },
     { id: "dinheiro", texto: "Sacar dinheiro em espécie (Fornos de Gramado só aceita dinheiro)" },
     { id: "natal-luz", texto: "Conferir no site do Natal Luz a programação de 2026 (datas da Parada e shows)" },
     { id: "clima", texto: "Ver previsão do tempo: novembro na serra varia de ~10°C a 25°C, com chuva" },
@@ -174,6 +176,8 @@ const EXTRAS = [
 ];
 
 const APPS = [
+  { nome: "Laçador de Ofertas", cat: "Cupons", desc: "O principal site de cupons de Gramado: atrações, restaurantes e até carrinho de bebê, muitas vezes mais barato que no site oficial. Some o cupom MELHORESDESTINOS (+5%, confira se ainda vale).", link: "https://www.lacadordeofertas.com.br/" },
+  { nome: "Melhores Destinos", cat: "Promoções", desc: "Publica os cupons do momento para Gramado (Laçador, parques, Natal Luz). Busque \"Gramado\" no site antes de comprar.", link: "https://www.melhoresdestinos.com.br/" },
   { nome: "TheFork", cat: "Restaurantes", emoji: "🍴", desc: "Reserva de mesa com descontos de até 50% em restaurantes participantes, além de pontos.", link: "https://www.thefork.com.br" },
   { nome: "Méliuz", cat: "Cashback", emoji: "💰", desc: "Cashback em hotéis, passagens, Booking, iFood, Uber e lojas. Ative antes de comprar.", link: "https://www.meliuz.com.br" },
   { nome: "Civitatis", cat: "Passeios", emoji: "🎟️", desc: "Ingressos e passeios em Gramado e Canela, às vezes em combos mais baratos.", link: "https://www.civitatis.com/br/gramado/" },
@@ -186,12 +190,26 @@ const APPS = [
   { nome: "Natal Luz (site oficial)", cat: "Eventos", emoji: "🎄", desc: "Programação oficial, horários da Parada e venda dos espetáculos pagos.", link: "https://www.natalluzdegramado.com.br" },
 ];
 
+// Grupos para receber promoções e tirar dúvidas.
+const GRUPOS = [
+  { nome: "Grupo de WhatsApp Gramado e Canela", cat: "Falando de Viagem", desc: "Grupo de viajantes que trocam dicas, fotos e promoções da Serra Gaúcha. As regras e o link de entrada ficam no fórum.", link: "https://www.falandodeviagem.com.br/viewtopic.php?p=451910" },
+  { nome: "Alertas do Melhores Destinos", cat: "WhatsApp / app", desc: "Canal e app com alertas de promoções. Ative os avisos de Gramado para pegar cupons relâmpago do Laçador.", link: "https://www.melhoresdestinos.com.br/" },
+  { nome: "Natal Luz no WhatsApp", cat: "Ingressos", desc: "Desde 2025 o Natal Luz também vende ingressos pelo WhatsApp oficial (o número fica no site).", link: "https://www.natalluzdegramado.com.br/" },
+];
+
+// Dicas para pagar menos. Valores citados são de 2025 e servem de referência.
 const DICAS_DESCONTO = [
-  "Compre os ingressos online: na maioria dos parques sai mais barato que na bilheteria.",
-  "Pergunte por combos (ex.: atrações do mesmo grupo em Gramado/Canela) antes de comprar avulso.",
-  "Ative o cashback (Méliuz, banco ou cartão) antes de pagar hotel, carro e ingressos.",
-  "Confira a idade de gratuidade de cada parque — crianças pequenas costumam não pagar.",
-  "Na recepção do hotel às vezes há cupons e parcerias com atrações locais.",
+  { titulo: "Compare sempre com o Laçador de Ofertas", texto: "Antes de comprar no site oficial, procure a atração no Laçador. Exemplo de 2025: Snowland a R$ 259 no site oficial e R$ 199 no Laçador." },
+  { titulo: "Some cupons", texto: "O cupom MELHORESDESTINOS dava +5% em cima das promoções do Laçador e podia ser somado a outros cupons. Teste no carrinho antes de pagar." },
+  { titulo: "Passaporte em vez de ingresso avulso", texto: "O Passaporte Dreamland junta 8 atrações (Museu de Cera, Super Carros, Hollywood Dream Cars...). Em 2025 custava R$ 199 contra R$ 839 comprando separado." },
+  { titulo: "Natal Luz: quanto antes, mais barato", texto: "Os espetáculos pagos têm desconto maior para quem compra cedo (em 2024 ia de 20% em julho a 5% em outubro). Compre já os que quiser." },
+  { titulo: "Combos de parques", texto: "Snowland e Acquamotion são do mesmo grupo e costumam ter combo. Bondinhos e Skyglass também aparecem juntos em pacotes de Canela." },
+  { titulo: "Crianças pequenas não pagam", texto: "A maioria dos parques libera bebês e crianças pequenas. Leve sempre o documento delas para provar a idade." },
+  { titulo: "Cashback e pontos", texto: "Ative Méliuz ou o cashback do banco antes de pagar hotel, carro e ingressos. Pontos Livelo e Esfera também viram ingressos e diárias." },
+  { titulo: "Carro parado no hotel", texto: "No centro de Gramado o estacionamento na rua é pago e disputado. Deixe o carro no Wish Serrano e vá a pé à Rua Coberta, Vila de Natal e Borges de Medeiros." },
+  { titulo: "Coma bem gastando menos", texto: "O café colonial substitui o jantar (já está no roteiro). Galeterias como o Galeto Itália são rodízio com preço fixo. Fornos de Gramado vende cuca e pão barato, só no dinheiro." },
+  { titulo: "Lanches do mercado", texto: "Compre água, frutas e lanches das crianças em supermercado: dentro dos parques tudo custa bem mais." },
+  { titulo: "Pergunte no hotel", texto: "A recepção às vezes tem cupons e parcerias com atrações locais, além de indicar o carrinho de bebê alugado." },
 ];
 
 // Sugestão de mala para 6 dias (07 a 12/11). Novembro na serra: ~10°C à noite,
@@ -226,7 +244,7 @@ const MALA = [
       "Potinhos e lanches (frutinhas, biscoito)",
     ]},
     { titulo: "Passeio", itens: [
-      "Carrinho + capa de chuva do carrinho",
+      "Carrinho + capa de chuva do carrinho (ou alugue em Gramado: veja em Pendências)",
       "Canguru (Skyglass é no colo)",
       "Cadeirinha do carro (se não alugar na locadora)",
       "Mochila de passeio",
@@ -319,4 +337,6 @@ const CONTATOS = {
   parada: { site: "https://www.natalluzdegramado.com.br/" },
   "x-supercarros": { site: "https://www.supercarros.com.br/" },
   "x-olivas": { site: "https://www.olivasdegramado.com.br/" },
+  carrinho: { site: "https://casadoviajante.com.br/", whatsapp: "54991119260",
+    obs: "Entrega e retira no hotel. Diária a partir de ~R$ 50 (preço de 2025). Também aluga berço portátil e bebê conforto. Outras opções: @babygramadoalugueis e @aluga_tur no Instagram, ou a AirCloset no Laçador de Ofertas." },
 };

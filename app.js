@@ -416,15 +416,18 @@
 
   // ---------- Descontos ----------
   function renderDescontos() {
-    $("#aba-descontos").innerHTML = `
-      <h2 class="secao">Apps e sites de desconto</h2>
-      <div class="app-lista">
-        ${APPS.map((a) => `<a class="card app-item" href="${esc(a.link)}" target="_blank" rel="noopener">
+    const lista = (itens) => `<div class="app-lista">
+        ${itens.map((a) => `<a class="card app-item" href="${esc(a.link)}" target="_blank" rel="noopener">
           <div><h3>${esc(a.nome)} <span class="tag">${esc(a.cat)}</span></h3><p>${esc(a.desc)}</p></div></a>`).join("")}
-      </div>
-      <h2 class="secao">Dicas para economizar</h2>
-      <div class="card"><ul class="dicas">${DICAS_DESCONTO.map((d) => `<li>${esc(d)}</li>`).join("")}</ul></div>
-      <p class="aviso">Descontos e parcerias mudam com frequência; confira as condições na hora da compra.</p>`;
+      </div>`;
+    $("#aba-descontos").innerHTML = `
+      <h2 class="secao">Dicas para pagar menos</h2>
+      <div class="card"><ul class="dicas">${DICAS_DESCONTO.map((d) => `<li><b>${esc(d.titulo)}.</b> ${esc(d.texto)}</li>`).join("")}</ul></div>
+      <h2 class="secao">Grupos</h2>
+      ${lista(GRUPOS)}
+      <h2 class="secao">Apps e sites de desconto</h2>
+      ${lista(APPS)}
+      <p class="aviso">Cupons e preços mudam o tempo todo; os valores citados são de 2025 e servem só de referência. Confira as condições na hora da compra.</p>`;
   }
 
   // ---------- abas ----------
