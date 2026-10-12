@@ -144,5 +144,25 @@ window.FOTOS_LOCAIS = {
   "src": "fotos/estrada.jpg",
   "pagina": "https://www.flickr.com/photos/29039641@N02/3618484362",
   "credito": "PAULO BROCKMANN · CC BY-NC-SA 2.0"
+ },
+ "acquamotion": {
+  "src": "fotos/acquamotion.jpg",
+  "pagina": "https://www.acquamotion.com.br/",
+  "credito": "Divulgação Acquamotion"
+ },
+ "galeto": {
+  "src": "fotos/galeto.jpg",
+  "pagina": "https://www.galetoitalia.com.br/",
+  "credito": "Divulgação Galeto Itália"
+ },
+ "skyglass": {
+  "src": "fotos/skyglass.jpg",
+  "pagina": "https://www.skyglasscanela.com.br/",
+  "credito": "Divulgação Skyglass Canela"
+ },
+ "x-olivas": {
+  "src": "fotos/x-olivas.jpg",
+  "pagina": "https://www.olivasdegramado.com.br/",
+  "credito": "Divulgação Olivas de Gramado"
  }
 };

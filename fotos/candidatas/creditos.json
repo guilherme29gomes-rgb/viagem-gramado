@@ -207,298 +207,32 @@
   "licenca": "CC BY-NC-SA 2.0",
   "fonte": "flickr"
  },
- "wish-s1.jpg": {
-  "url": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/br.png",
-  "pagina": "https://www.wishhotels.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "wish-s2.jpg": {
-  "url": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/us.png",
-  "pagina": "https://www.wishhotels.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "wish-s3.jpg": {
-  "url": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/es.png",
-  "pagina": "https://www.wishhotels.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "wish-s4.jpg": {
-  "url": "https://irp.cdn-website.com/f78219b8/dms3rep/multi/opt/mobile-wish-42427f9f-640w.png",
-  "pagina": "https://www.wishhotels.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "wish-s5.jpg": {
-  "url": "https://irp.cdn-website.com/f78219b8/dms3rep/multi/opt/mobile-natal2-640w.png",
-  "pagina": "https://www.wishhotels.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "wish-s6.jpg": {
-  "url": "https://irp.cdn-website.com/f78219b8/dms3rep/multi/opt/mobile-paisserrano-640w.png",
-  "pagina": "https://www.wishhotels.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "wish-s7.jpg": {
-  "url": "https://static.hugedomains.com/images/hdv3-img/og_hugedomains.png",
-  "pagina": "https://www.wishhotels.com/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "wish-s8.jpg": {
-  "url": "https://static.hugedomains.com/images/hdv3-img/favorite-header.png",
-  "pagina": "https://www.wishhotels.com/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "wish-s9.jpg": {
-  "url": "https://static.hugedomains.com/images/hdv3-img/cart.png",
-  "pagina": "https://www.wishhotels.com/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "wish-s10.jpg": {
-  "url": "https://static.hugedomains.com/images/hdv3-img/30daysmallico.png",
-  "pagina": "https://www.wishhotels.com/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "wish-s11.jpg": {
-  "url": "https://static.hugedomains.com/images/hdv3-img/roket-side-ico.png",
-  "pagina": "https://www.wishhotels.com/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "wish-s12.jpg": {
-  "url": "https://static.hugedomains.com/images/hdv3-img/safesmallico.png",
-  "pagina": "https://www.wishhotels.com/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "galeto-s1.jpg": {
-  "url": "https://galetoitalia.com.br/wp-content/uploads/2026/01/SECAO-1-MOBILE-RETRATO-1.webp",
-  "pagina": "https://www.galetoitalia.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "galeto-s2.jpg": {
-  "url": "https://galetoitalia.com.br/wp-content/uploads/2026/01/Secao-3-foto-1-1.webp",
-  "pagina": "https://www.galetoitalia.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "galeto-s3.jpg": {
-  "url": "https://galetoitalia.com.br/wp-content/uploads/2026/01/Secao-3-foto-2-1.webp",
-  "pagina": "https://www.galetoitalia.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "galeto-s4.jpg": {
-  "url": "https://galetoitalia.com.br/wp-content/uploads/2026/01/Secao-3-foto-3.webp",
-  "pagina": "https://www.galetoitalia.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
  "galeto-s5.jpg": {
   "url": "https://galetoitalia.com.br/wp-content/uploads/2026/01/IMAGEM-ALMOCO-1.webp",
   "pagina": "https://www.galetoitalia.com.br/",
   "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "galeto-s6.jpg": {
-  "url": "https://galetoitalia.com.br/wp-content/uploads/2026/01/IMAGEM-RODIZIO-JANTAR-1.webp",
-  "pagina": "https://www.galetoitalia.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "skyglass-s1.jpg": {
-  "url": "https://skyglasscanela.com.br/wp-content/uploads/2024/01/skyglass_hero_1.webp",
-  "pagina": "https://www.skyglasscanela.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "skyglass-s2.jpg": {
-  "url": "https://skyglasscanela.com.br/wp-content/uploads/2024/01/skyglass_hero_2.webp",
-  "pagina": "https://www.skyglasscanela.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "skyglass-s3.jpg": {
-  "url": "https://skyglasscanela.com.br/wp-content/uploads/2026/06/Banner1.jpg",
-  "pagina": "https://www.skyglasscanela.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "skyglass-s4.jpg": {
-  "url": "https://skyglasscanela.com.br/wp-content/uploads/2024/01/hero_mobile3.webp",
-  "pagina": "https://www.skyglasscanela.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
+  "autor": "Divulgação Galeto Itália",
+  "licenca": ""
  },
  "skyglass-s5.jpg": {
   "url": "https://skyglasscanela.com.br/wp-content/uploads/2024/01/hero_mobile2.webp",
   "pagina": "https://www.skyglasscanela.com.br/",
   "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "skyglass-s6.jpg": {
-  "url": "https://skyglasscanela.com.br/wp-content/uploads/2024/01/hero_mobile1.webp",
-  "pagina": "https://www.skyglasscanela.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
+  "autor": "Divulgação Skyglass Canela",
+  "licenca": ""
  },
  "acquamotion-s1.jpg": {
   "url": "https://acquamotion.com.br/static/assets/seo_default_image/seo_default_image.png",
   "pagina": "https://www.acquamotion.com.br/",
   "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "acquamotion-s2.jpg": {
-  "url": "https://www.acquamotion.com.br/media/acqua-termas-light.png-9605a88a5302eeec9d629491a533a3cc-desktop.webp",
-  "pagina": "https://www.acquamotion.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "acquamotion-s3.jpg": {
-  "url": "https://www.acquamotion.com.br/media/acqua-termas-blue.png-ad84c907826daadac5f7df3b04ff3c51-desktop.webp",
-  "pagina": "https://www.acquamotion.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "acquamotion-s4.jpg": {
-  "url": "https://www.acquamotion.com.br/static/assets/images/banner1/main-guardian-home.webp",
-  "pagina": "https://www.acquamotion.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "acquamotion-s5.jpg": {
-  "url": "https://www.acquamotion.com.br/media/IMG_0575.png-e2476856e12e1847301bb3bb8510d740-desktop.webp",
-  "pagina": "https://www.acquamotion.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "acquamotion-s6.jpg": {
-  "url": "https://www.acquamotion.com.br/media/Banner_GP-Turismo_1210x255.png-34787f0a1eb918045eb96b48dd4f022d-desktop.webp",
-  "pagina": "https://www.acquamotion.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "x-supercarros-s1.jpg": {
-  "url": "https://images.tcdn.com.br/img/img_prod/1308140/1712154822_f1a5983b99.png",
-  "pagina": "https://www.supercarros.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "x-supercarros-s2.jpg": {
-  "url": "https://images.tcdn.com.br/img/img_prod/1308140/6ac797c15af46_bannermobile.jpg",
-  "pagina": "https://www.supercarros.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "x-supercarros-s3.jpg": {
-  "url": "https://images.tcdn.com.br/img/img_prod/1308140/6abe53a5adf86_Mobile-outubrorosa.jpg",
-  "pagina": "https://www.supercarros.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "x-supercarros-s4.jpg": {
-  "url": "https://images.tcdn.com.br/img/img_prod/1308140/6a98617b98aa6_Mobile.jpg",
-  "pagina": "https://www.supercarros.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "x-supercarros-s5.jpg": {
-  "url": "https://images.tcdn.com.br/img/img_prod/1308140/6a47b476dc013_Mobile-Combo2ingressos.jpg",
-  "pagina": "https://www.supercarros.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "x-supercarros-s6.jpg": {
-  "url": "https://images.tcdn.com.br/img/img_prod/1308140/69fa2ea5a24ea_Mobile-BannerSuperMarcas.jpg",
-  "pagina": "https://www.supercarros.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
+  "autor": "Divulgação Acquamotion",
+  "licenca": ""
  },
  "x-olivas-s1.jpg": {
   "url": "https://static.wixstatic.com/media/4cc619_edef33ad03844f818e16eda59f590b1e~mv2.jpg/v1/fill/w_2500,h_1160,al_c/4cc619_edef33ad03844f818e16eda59f590b1e~mv2.jpg",
   "pagina": "https://www.olivasdegramado.com.br/",
   "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "x-olivas-s2.jpg": {
-  "url": "https://static.wixstatic.com/media/4cc619_c509334ff7bd45689d592cd668778669%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/4cc619_c509334ff7bd45689d592cd668778669%7Emv2.png",
-  "pagina": "https://www.olivasdegramado.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "x-olivas-s3.jpg": {
-  "url": "https://static.wixstatic.com/media/4cc619_c509334ff7bd45689d592cd668778669%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/4cc619_c509334ff7bd45689d592cd668778669%7Emv2.png",
-  "pagina": "https://www.olivasdegramado.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "x-olivas-s4.jpg": {
-  "url": "https://static.wixstatic.com/media/4cc619_c509334ff7bd45689d592cd668778669%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/4cc619_c509334ff7bd45689d592cd668778669%7Emv2.png",
-  "pagina": "https://www.olivasdegramado.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "x-olivas-s5.jpg": {
-  "url": "https://static.wixstatic.com/media/4cc619_80b41c70eac942cd90b71b88947badcc~mv2.png/v1/fill/w_50,h_33,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/4cc619_80b41c70eac942cd90b71b88947badcc~mv2.png",
-  "pagina": "https://www.olivasdegramado.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
- },
- "x-olivas-s6.jpg": {
-  "url": "https://static.wixstatic.com/media/11062b_cef3b719166a4815b446d4dcfcb6120d~mv2.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_cef3b719166a4815b446d4dcfcb6120d~mv2.png",
-  "pagina": "https://www.olivasdegramado.com.br/",
-  "titulo": "Imagem do site oficial",
-  "autor": "Divulgação",
-  "licenca": "site oficial"
+  "autor": "Divulgação Olivas de Gramado",
+  "licenca": ""
  }
 }
