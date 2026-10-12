@@ -1,5 +1,5 @@
 // Deixa o app funcionando offline (inclusive fotos já vistas).
-const CACHE = "gramado-v8";
+const CACHE = "gramado-v9";
 const ARQUIVOS = ["./", "index.html", "styles.css", "app.js", "data.js", "fotos.js", "icon.svg", "icone-3d-180.png", "icone-3d-512.png", "icone-3d-192.png", "icone-3d-maskable-192.png", "icone-3d-maskable-512.png", "manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {

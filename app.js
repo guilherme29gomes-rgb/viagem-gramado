@@ -449,6 +449,23 @@
   renderDescontos();
   mostrarAba(store.get("aba", "roteiro"));
 
+  // Botão de instalação (Chrome no Android mostra quando o app pode ser instalado).
+  let pedidoInstalar = null;
+  const botaoInstalar = $("#instalar");
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    pedidoInstalar = e;
+    if (botaoInstalar) botaoInstalar.hidden = false;
+  });
+  if (botaoInstalar) botaoInstalar.addEventListener("click", async () => {
+    if (!pedidoInstalar) return;
+    pedidoInstalar.prompt();
+    await pedidoInstalar.userChoice;
+    pedidoInstalar = null;
+    botaoInstalar.hidden = true;
+  });
+  window.addEventListener("appinstalled", () => { if (botaoInstalar) botaoInstalar.hidden = true; });
+
   if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
     navigator.serviceWorker.register("sw.js").catch(() => {});
   }
