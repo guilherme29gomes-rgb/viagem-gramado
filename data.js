@@ -190,6 +190,20 @@ const APPS = [
   { nome: "Natal Luz (site oficial)", cat: "Eventos", emoji: "🎄", desc: "Programação oficial, horários da Parada e venda dos espetáculos pagos.", link: "https://www.natalluzdegramado.com.br" },
 ];
 
+// Onde dá para usar os pontos que vocês têm (pesquisa de outubro de 2026).
+const PONTOS = [
+  { nome: "Azul Fidelidade", status: "Passeios: sim", ok: true,
+    desc: "No Azul Viagens dá para pagar passeios e ingressos com pontos (procure Gramado e Canela). O Shopping Azul também troca pontos por ingressos de shows e eventos. Compare o valor: em passeios a conversão costuma ser menos vantajosa que em passagens. Restaurantes: não.",
+    link: "https://www.azulviagens.com.br/" },
+  { nome: "Smiles", status: "Passeios: sim", ok: true,
+    desc: "A área de Atrações da Smiles (parceria Trade Tours) vende ingressos de parques, city tours e experiências gastronômicas com milhas, dinheiro ou os dois. O Shopping Smiles (Easy Live) tem ingressos de eventos. Veja se há atrações de Gramado e Canela. Restaurante comum: não.",
+    link: "https://www.smiles.com.br/parceiros/atracoes/trade-tours" },
+  { nome: "Pontos Decolar", status: "Passeios: não confirmado", ok: false,
+    desc: "O Passaporte Decolar dá desconto em hotel, voo, carro e pacote. Não achamos uso atual em passeios, e as promoções de atividades com pontos acabaram em setembro de 2026. Vale para a próxima reserva de hotel ou carro. Restaurantes: não.",
+    link: "https://www.decolar.com/" },
+];
+const DICA_PONTOS = "Para refeições, nenhum dos três paga a conta do restaurante. O que dá para fazer: usar os pontos nos passeios e ingressos e guardar o dinheiro para comer, ou trocar pontos por crédito de restaurante/delivery quando o programa oferecer (confira a área de parceiros de cada um).";
+
 // Grupos para receber promoções e tirar dúvidas.
 const GRUPOS = [
   { nome: "Grupo de WhatsApp Gramado e Canela", cat: "Falando de Viagem", desc: "Grupo de viajantes que trocam dicas, fotos e promoções da Serra Gaúcha. As regras e o link de entrada ficam no fórum.", link: "https://www.falandodeviagem.com.br/viewtopic.php?p=451910" },

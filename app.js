@@ -427,6 +427,12 @@
     $("#aba-descontos").innerHTML = `
       <h2 class="secao">Dicas para pagar menos</h2>
       <div class="card"><ul class="dicas">${DICAS_DESCONTO.map((d) => `<li><b>${esc(d.titulo)}.</b> ${esc(d.texto)}</li>`).join("")}</ul></div>
+      <h2 class="secao">Usar seus pontos</h2>
+      <div class="app-lista">
+        ${PONTOS.map((a) => `<a class="card app-item" href="${esc(a.link)}" target="_blank" rel="noopener">
+          <div><h3>${esc(a.nome)} <span class="tag ${a.ok ? "ok" : "status"}">${esc(a.status)}</span></h3><p>${esc(a.desc)}</p></div></a>`).join("")}
+      </div>
+      <p class="aviso">${esc(DICA_PONTOS)}</p>
       <h2 class="secao">Grupos</h2>
       ${lista(GRUPOS)}
       <h2 class="secao">Apps e sites de desconto</h2>
