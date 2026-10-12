@@ -55,6 +55,7 @@
   const ICO_PINO = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg>`;
   const ICO_ZAP = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z"/></svg>`;
   const ICO_SITE = `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>`;
+  const ICO_INSTA = `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg>`;
   const ICO_FONE = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>`;
   // Botões de contato (site, WhatsApp, telefone) de um local, quando houver.
   function contatoHTML(id) {
@@ -63,6 +64,7 @@
     const tel = c.telefone ? c.telefone.replace(/\D/g, "") : "";
     return [
       c.site ? `<a class="pill" href="${esc(c.site)}" target="_blank" rel="noopener">${ICO_SITE} Site</a>` : "",
+      c.instagram ? `<a class="pill insta" href="https://www.instagram.com/${esc(c.instagram)}/" target="_blank" rel="noopener">${ICO_INSTA} @${esc(c.instagram)}</a>` : "",
       c.whatsapp ? `<a class="pill zap" href="https://wa.me/55${esc(c.whatsapp)}" target="_blank" rel="noopener">${ICO_ZAP} WhatsApp</a>` : "",
       tel ? `<a class="pill" href="tel:+55${tel}">${ICO_FONE} ${esc(c.telefone)}</a>` : "",
     ].join("") + (c.obs || c.confirmar ? `<p class="contato-obs">${esc(c.obs || "Contato tirado de matéria de turismo: confirme antes de pagar.")}</p>` : "");
@@ -448,23 +450,6 @@
   renderMala();
   renderDescontos();
   mostrarAba(store.get("aba", "roteiro"));
-
-  // Botão de instalação (Chrome no Android mostra quando o app pode ser instalado).
-  let pedidoInstalar = null;
-  const botaoInstalar = $("#instalar");
-  window.addEventListener("beforeinstallprompt", (e) => {
-    e.preventDefault();
-    pedidoInstalar = e;
-    if (botaoInstalar) botaoInstalar.hidden = false;
-  });
-  if (botaoInstalar) botaoInstalar.addEventListener("click", async () => {
-    if (!pedidoInstalar) return;
-    pedidoInstalar.prompt();
-    await pedidoInstalar.userChoice;
-    pedidoInstalar = null;
-    botaoInstalar.hidden = true;
-  });
-  window.addEventListener("appinstalled", () => { if (botaoInstalar) botaoInstalar.hidden = true; });
 
   if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
     navigator.serviceWorker.register("sw.js").catch(() => {});
