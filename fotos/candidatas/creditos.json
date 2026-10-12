@@ -256,67 +256,11 @@
   "autor": "Blog Esse Mundo É Nosso",
   "licenca": ""
  },
- "vcp-o2.jpg": {
-  "url": "https://api.openverse.org/v1/images/3683260d-1feb-4175-8e59-a0f748e453f5/thumb/",
-  "pagina": "https://www.flickr.com/photos/31922083@N02/6958692669",
-  "titulo": "Viracopos Airport",
-  "autor": "Amure Pinho",
-  "licenca": "CC BY-NC-SA 2.0",
-  "fonte": "flickr"
- },
  "vcp-o3.jpg": {
   "url": "https://api.openverse.org/v1/images/279133ff-d819-4ebc-ae20-93f918eb21ed/thumb/",
   "pagina": "https://www.flickr.com/photos/82289802@N00/49805784376",
   "titulo": "viracopos airport",
   "autor": "Fernando Stankuns",
-  "licenca": "CC BY-NC-SA 2.0",
-  "fonte": "flickr"
- },
- "vcp-o4.jpg": {
-  "url": "https://api.openverse.org/v1/images/223d86ae-b4fc-4cec-bed4-ca608f79567e/thumb/",
-  "pagina": "https://www.flickr.com/photos/64663239@N05/6329140788",
-  "titulo": "Aeroporto de Viracopos (Campinas-SP)",
-  "autor": "Programa de Aceleração do Crescimento (PAC)",
-  "licenca": "CC BY-NC-SA 2.0",
-  "fonte": "flickr"
- },
- "vcp-o5.jpg": {
-  "url": "https://api.openverse.org/v1/images/8daa6f51-d87c-43b5-a590-8c443a850667/thumb/",
-  "pagina": "https://www.flickr.com/photos/64663239@N05/6792583736",
-  "titulo": "Aeroporto de Viracopos (Campinas - SP)",
-  "autor": "Programa de Aceleração do Crescimento (PAC)",
-  "licenca": "CC BY-NC-SA 2.0",
-  "fonte": "flickr"
- },
- "vcp-o6.jpg": {
-  "url": "https://api.openverse.org/v1/images/935474f2-51b6-4617-bafc-2922101aad57/thumb/",
-  "pagina": "https://www.flickr.com/photos/64663239@N05/6938697417",
-  "titulo": "Aeroporto de Viracopos (Campinas - SP)",
-  "autor": "Programa de Aceleração do Crescimento (PAC)",
-  "licenca": "CC BY-NC-SA 2.0",
-  "fonte": "flickr"
- },
- "vcp-o7.jpg": {
-  "url": "https://api.openverse.org/v1/images/223d86ae-b4fc-4cec-bed4-ca608f79567e/thumb/",
-  "pagina": "https://www.flickr.com/photos/64663239@N05/6329140788",
-  "titulo": "Aeroporto de Viracopos (Campinas-SP)",
-  "autor": "Programa de Aceleração do Crescimento (PAC)",
-  "licenca": "CC BY-NC-SA 2.0",
-  "fonte": "flickr"
- },
- "vcp-o8.jpg": {
-  "url": "https://api.openverse.org/v1/images/8daa6f51-d87c-43b5-a590-8c443a850667/thumb/",
-  "pagina": "https://www.flickr.com/photos/64663239@N05/6792583736",
-  "titulo": "Aeroporto de Viracopos (Campinas - SP)",
-  "autor": "Programa de Aceleração do Crescimento (PAC)",
-  "licenca": "CC BY-NC-SA 2.0",
-  "fonte": "flickr"
- },
- "vcp-o9.jpg": {
-  "url": "https://api.openverse.org/v1/images/e4c83f2e-d4aa-4cc7-a70e-81ea2dcea0e4/thumb/",
-  "pagina": "https://www.flickr.com/photos/64663239@N05/6792583126",
-  "titulo": "Aeroporto de Viracopos (Campinas - SP)",
-  "autor": "Programa de Aceleração do Crescimento (PAC)",
   "licenca": "CC BY-NC-SA 2.0",
   "fonte": "flickr"
  }
