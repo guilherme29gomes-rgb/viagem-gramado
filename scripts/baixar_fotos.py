@@ -61,7 +61,7 @@ def buscar_openverse(termo):
         lic = (r.get("license") or "").upper()
         versao = r.get("license_version") or ""
         yield {
-            "url": r.get("url"),
+            "url": r.get("thumbnail") or r.get("url"),
             "pagina": r.get("foreign_landing_url") or "",
             "titulo": r.get("title") or "",
             "autor": r.get("creator") or "",
