@@ -70,6 +70,27 @@ def buscar_openverse(termo):
         }
 
 
+UA_NAVEGADOR = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1"
+
+
+def buscar_site(site):
+    # Pega a imagem de divulgação (og:image) e as primeiras fotos grandes da página.
+    req = urllib.request.Request(site, headers={"User-Agent": UA_NAVEGADOR})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        html = r.read().decode("utf-8", "ignore")
+    urls = re.findall(r'<meta[^>]+(?:property|name)=["\'](?:og:image|twitter:image)["\'][^>]+content=["\']([^"\']+)', html)
+    urls += re.findall(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\'](?:og:image|twitter:image)', html)
+    urls += re.findall(r'(?:src|data-src|href)=["\']([^"\']+\.(?:jpe?g|webp|png))["\']', html, re.I)
+    vistos = []
+    for u in urls:
+        u = urllib.parse.urljoin(site, u.replace("&amp;", "&"))
+        if u in vistos or re.search(r"logo|icon|favicon|sprite|whats|selo|banner-mobile", u, re.I):
+            continue
+        vistos.append(u)
+    for u in vistos[:6]:
+        yield {"url": u, "pagina": site, "titulo": "Imagem do site oficial", "autor": "Divulgação", "licenca": "site oficial"}
+
+
 def main():
     os.makedirs(SAIDA, exist_ok=True)
     locais = json.load(open("scripts/fotos.json", encoding="utf-8"))
@@ -81,7 +102,13 @@ def main():
         time.sleep(2)
         achadas = []
         try:
-            if local.get("fonte") == "openverse":
+            if local.get("fonte") == "site":
+                for site in local["sites"]:
+                    try:
+                        achadas += list(buscar_site(site))
+                    except Exception as e:
+                        print("site indisponível", site, e)
+            elif local.get("fonte") == "openverse":
                 for termo in local["buscas"]:
                     achadas += list(buscar_openverse(termo))[:3]
                     time.sleep(2)
@@ -89,12 +116,13 @@ def main():
                 achadas = list(buscar(local["busca"]))[:3]
         except Exception as e:  # segue para o próximo local
             print("erro na busca", local["id"], e)
-        prefixo = "o" if local.get("fonte") == "openverse" else ""
+        prefixo = {"openverse": "o", "site": "s"}.get(local.get("fonte"), "")
         for n, foto in enumerate(achadas, 1):
             nome = f"{local['id']}-{prefixo}{n}.jpg"
             try:
-                with open(os.path.join(SAIDA, nome), "wb") as f:
-                    f.write(get(foto["url"]))
+                req = urllib.request.Request(foto["url"], headers={"User-Agent": UA_NAVEGADOR})
+                with urllib.request.urlopen(req, timeout=30) as r, open(os.path.join(SAIDA, nome), "wb") as f:
+                    f.write(r.read())
                 creditos[nome] = foto
                 print("ok", nome, foto["titulo"])
             except Exception as e:

@@ -21,11 +21,16 @@
   "id": "wish",
   "nome": "Wish Serrano",
   "busca": "Wish Serrano Gramado",
-  "pronta": true,
-  "fonte": "openverse",
+  "pronta": false,
+  "fonte": "site",
   "buscas": [
    "Wish Serrano Gramado",
    "Serrano Resort Gramado"
+  ],
+  "sites": [
+   "https://www.wishhotels.com.br/",
+   "https://www.wishhotels.com/",
+   "https://wishserrano.com.br/"
   ]
  },
  {
@@ -61,11 +66,14 @@
   "id": "galeto",
   "nome": "Galeto Itália",
   "busca": "Galeto Itália Gramado",
-  "pronta": true,
-  "fonte": "openverse",
+  "pronta": false,
+  "fonte": "site",
   "buscas": [
    "Galeto Itália Gramado",
    "galeto primo canto"
+  ],
+  "sites": [
+   "https://www.galetoitalia.com.br/"
   ]
  },
  {
@@ -78,11 +86,14 @@
   "id": "skyglass",
   "nome": "Skyglass Canela",
   "busca": "Skyglass Canela",
-  "pronta": true,
-  "fonte": "openverse",
+  "pronta": false,
+  "fonte": "site",
   "buscas": [
    "Skyglass Canela",
    "Skyglass"
+  ],
+  "sites": [
+   "https://www.skyglasscanela.com.br/"
   ]
  },
  {
@@ -134,22 +145,31 @@
   "id": "acquamotion",
   "nome": "Acquamotion",
   "busca": "Acquamotion",
-  "pronta": true,
-  "fonte": "openverse",
+  "pronta": false,
+  "fonte": "site",
   "buscas": [
    "Acquamotion Gramado",
    "Acquamotion"
+  ],
+  "sites": [
+   "https://www.acquamotion.com.br/",
+   "https://acquamotion.com/"
   ]
  },
  {
   "id": "hector",
   "nome": "Hector Pizzaria",
   "busca": "Hector pizzaria Gramado",
-  "pronta": true,
-  "fonte": "openverse",
+  "pronta": false,
+  "fonte": "site",
   "buscas": [
    "Hector pizzaria Gramado",
    "pizzaria Gramado"
+  ],
+  "sites": [
+   "https://www.hectorgramado.com.br/",
+   "https://hectorpizzaria.com.br/",
+   "https://www.hector.com.br/"
   ]
  },
  {
@@ -239,11 +259,14 @@
   "id": "x-supercarros",
   "nome": "Super Carros / Hollywood Dream Cars",
   "busca": "Hollywood Dream Cars Gramado",
-  "pronta": true,
-  "fonte": "openverse",
+  "pronta": false,
+  "fonte": "site",
   "buscas": [
    "Hollywood Dream Cars Gramado",
    "Super Carros Gramado"
+  ],
+  "sites": [
+   "https://www.supercarros.com.br/"
   ]
  },
  {
@@ -256,11 +279,14 @@
   "id": "x-olivas",
   "nome": "Olivas de Gramado",
   "busca": "Olivas de Gramado",
-  "pronta": true,
-  "fonte": "openverse",
+  "pronta": false,
+  "fonte": "site",
   "buscas": [
    "Olivas de Gramado",
    "Olivas Gramado"
+  ],
+  "sites": [
+   "https://www.olivasdegramado.com.br/"
   ]
  },
  {
