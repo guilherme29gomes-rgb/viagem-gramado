@@ -1,0 +1,50 @@
+name: Gerar APK Android
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "android/**"
+      - "index.html"
+      - "app.js"
+      - "data.js"
+      - "fotos.js"
+      - "styles.css"
+      - ".github/workflows/gerar-apk.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gerar-apk
+  cancel-in-progress: true
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+      - name: Copiar o app para dentro do projeto Android
+        run: |
+          mkdir -p android/app/src/main/assets/www/fotos
+          cp index.html app.js data.js fotos.js styles.css icon.svg icone-3d-*.png manifest.webmanifest android/app/src/main/assets/www/
+          cp fotos/*.jpg android/app/src/main/assets/www/fotos/
+      - name: Montar o APK
+        run: gradle -p android assembleDebug --no-daemon
+      - name: Salvar o APK no repositório
+        run: |
+          mkdir -p apk
+          cp android/app/build/outputs/apk/debug/app-debug.apk apk/roteiro-gramado.apk
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apk/roteiro-gramado.apk
+          git commit -m "APK do app para Android" || exit 0
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
