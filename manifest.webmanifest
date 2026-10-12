@@ -8,8 +8,30 @@
   "theme_color": "#ffffff",
   "lang": "pt-BR",
   "icons": [
-    { "src": "icone-3d-512.png", "sizes": "512x512", "type": "image/png" },
-    { "src": "icone-3d-180.png", "sizes": "180x180", "type": "image/png" },
-    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
-  ]
+    {
+      "src": "icone-3d-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icone-3d-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icone-3d-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icone-3d-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "description": "Roteiro da viagem a Gramado e Canela, 07 a 12 de novembro."
 }
