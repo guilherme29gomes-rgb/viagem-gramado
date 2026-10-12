@@ -46,7 +46,7 @@ def main():
         else:
             destino = os.path.join(PASTA, f"{id_local}.jpg")
             with open(destino, "wb") as f:
-                f.write(reduzir(origem, 900, 80))
+                f.write(reduzir(origem, 800, 72))
             src = destino
         fotos[id_local] = {"src": src, "pagina": c.get("pagina", ""), "credito": credito(c)}
 

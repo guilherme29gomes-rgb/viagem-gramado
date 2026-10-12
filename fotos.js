@@ -1,2 +1,123 @@
 // Gerado por scripts/montar_fotos.py. Fotos do Wikimedia Commons.
-window.FOTOS_LOCAIS = {};
+window.FOTOS_LOCAIS = {
+ "poa": {
+  "src": "fotos/poa.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Aeroporto_Salgado_Filho_de_Porto_Alegre.jpg",
+  "credito": "Yeuxpapilon · CC BY-SA 4.0"
+ },
+ "centro": {
+  "src": "fotos/centro.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Avenida_Borges_de_Medeiros,_Gramado,_agosto_de_2019_(7).jpg",
+  "credito": "Fronteira · CC BY-SA 4.0"
+ },
+ "parada": {
+  "src": "fotos/parada.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Natal_Luz_-_Gramado_-_panoramio.jpg",
+  "credito": "Larissa Fraga · CC BY 3.0"
+ },
+ "ruacoberta": {
+  "src": "fotos/ruacoberta.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Rua_Coberta_-_Gramado_-_panoramio.jpg",
+  "credito": "Larissa Fraga · CC BY 3.0"
+ },
+ "bondinhos": {
+  "src": "fotos/bondinhos.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Caracol_falls_(2_April_2008).jpg",
+  "credito": "Tiago Fioreze · CC BY-SA 3.0"
+ },
+ "lagonegro": {
+  "src": "fotos/lagonegro.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Lago_Negro_Gramado.jpg",
+  "credito": "Yeuxpapilon · CC BY-SA 4.0"
+ },
+ "palacio": {
+  "src": "fotos/palacio.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Palacio_dos_festivais_-_Gramado_-_panoramio.jpg",
+  "credito": "Larissa Fraga · CC BY 3.0"
+ },
+ "minimundo": {
+  "src": "fotos/minimundo.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Mini_Mundo_em_setembro_de_2019_(24).jpg",
+  "credito": "Érico · CC BY-SA 4.0"
+ },
+ "aldeia": {
+  "src": "fotos/aldeia.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Renato_Soares_Aldeia_do_Papai_Noel_Gramado_RS_22_(40696111605).jpg",
+  "credito": "MTur Destinos · Public domain"
+ },
+ "belavista": {
+  "src": "fotos/belavista.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Colonial_Bela_Vista_-_panoramio.jpg",
+  "credito": "Larissa Fraga · CC BY 3.0"
+ },
+ "x-joaquina": {
+  "src": "fotos/x-joaquina.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Lago_Joaquina_Rita_Bier_(Gramado)_04.JPG",
+  "credito": "Eugenio Hansen, OFS · CC BY-SA 3.0"
+ },
+ "x-matriz": {
+  "src": "fotos/x-matriz.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Igreja_Matriz_S%C3%A3o_Pedro_Gramado.jpg",
+  "credito": "Abtessari · Public domain"
+ },
+ "x-catedral": {
+  "src": "fotos/x-catedral.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Catedral_de_Pedra,_Canela_RS.jpg",
+  "credito": "Rosanetur · CC BY 2.0"
+ },
+ "x-terramagica": {
+  "src": "fotos/x-terramagica.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Parque_Terra_M%C3%A1gica_Florybal,_Canela,_Brasil_-_Francisco_de_Assis.JPG",
+  "credito": "Eugenio Hansen, OFS · CC BY-SA 4.0"
+ },
+ "x-mundovapor": {
+  "src": "fotos/x-mundovapor.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Mundo_a_Vapor,_Gramado-Canela_(6051011845).jpg",
+  "credito": "Cesar Cardoso from Brasilia, Brazil · CC BY 2.0"
+ },
+ "x-gramadozoo": {
+  "src": "fotos/x-gramadozoo.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Ramphastos_toco-Gramado_Zoo,_Brazil-a.jpg",
+  "credito": "Ironman br · CC BY-SA 3.0"
+ },
+ "x-dreamland": {
+  "src": "fotos/x-dreamland.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Dreamland_Museu_de_Cera,_Gramado_(6051588348).jpg",
+  "credito": "Cesar Cardoso from Brasilia, Brazil · CC BY 2.0"
+ },
+ "x-lavanda": {
+  "src": "fotos/x-lavanda.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Le_Jardin_Parque_de_Lavanda_-_Gramado_-_RS_-_Brasil..JPG",
+  "credito": "Lúcia Bischoff · CC BY-SA 4.0"
+ },
+ "x-quilombo": {
+  "src": "fotos/x-quilombo.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Vale_do_Quilombo,_Gramado,_Brasil_0.JPG",
+  "credito": "Eugenio Hansen, OFS · CC BY-SA 4.0"
+ },
+ "x-caracol": {
+  "src": "fotos/x-caracol.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Cascata_Caracol_-_Canela_RS.jpg",
+  "credito": "Dalton Scavassa · CC BY-SA 4.0"
+ },
+ "x-ferradura": {
+  "src": "fotos/x-ferradura.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Parque_da_ferradura_-_Canela_-_RS.jpg",
+  "credito": "Rodrigo Mazzola · CC BY-SA 3.0"
+ },
+ "x-castelinho": {
+  "src": "fotos/x-castelinho.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Castelinho_Caracol,_Canela_RS.jpg",
+  "credito": "Daniel Garcia Neto · CC BY 2.0"
+ },
+ "x-florybal": {
+  "src": "fotos/x-florybal.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Florybal_Gramado.jpg",
+  "credito": "Lenny Maidana · CC BY-SA 4.0"
+ },
+ "x-snowland": {
+  "src": "fotos/x-snowland.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:RenatoSoares_SnowLand_Gramado_RS_(40193258034).jpg",
+  "credito": "MTur Destinos · Public domain"
+ }
+};
