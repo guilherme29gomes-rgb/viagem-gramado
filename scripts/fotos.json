@@ -21,7 +21,7 @@
   "id": "wish",
   "nome": "Wish Serrano",
   "busca": "Wish Serrano Gramado",
-  "pronta": false,
+  "pronta": true,
   "fonte": "url",
   "buscas": [
    "Wish Serrano Gramado",

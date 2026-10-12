@@ -49,6 +49,9 @@ def main():
                 f.write(reduzir(origem, 800, 72))
             src = destino
         fotos[id_local] = {"src": src, "pagina": c.get("pagina", ""), "credito": credito(c)}
+        # Foto pequena demais para capa: aparece só como miniatura.
+        if Image.open(origem).width < 500:
+            fotos[id_local]["pequena"] = True
 
     js = "// Gerado por scripts/montar_fotos.py. Fotos livres do Wikimedia Commons e do Flickr (via Openverse).\n"
     js += "window.FOTOS_LOCAIS = " + json.dumps(fotos, ensure_ascii=False, indent=1) + ";\n"

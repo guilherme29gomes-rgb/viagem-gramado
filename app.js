@@ -46,6 +46,7 @@
     : `<span class="icone-local" aria-hidden="true"><svg viewBox="0 0 24 24">${ICONES[l.tipo] || ICONES.pin}</svg></span>`;
   // Capa grande: foto salva; senão, busca online (quando permitido).
   const capaHTML = (l, id) => {
+    if (fotoDe(l) && fotoDe(l).pequena) return "";
     if (fotoDe(l)) return `<div class="capa" data-galeria="${id}"><img src="${esc(fotoDe(l).src)}" alt="${esc(l.nome)}"><span class="ver-fotos">${ICO_FOTO} fotos</span></div>`;
     if (fotosOnline && l.foto) return `<div class="capa" data-foto="${esc(l.foto)}" data-galeria="${id}">${icone(l)}<span class="ver-fotos">${ICO_FOTO} fotos</span></div>`;
     return "";

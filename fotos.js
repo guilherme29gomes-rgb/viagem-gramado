@@ -164,5 +164,11 @@ window.FOTOS_LOCAIS = {
   "src": "fotos/x-olivas.jpg",
   "pagina": "https://www.olivasdegramado.com.br/",
   "credito": "Divulgação Olivas de Gramado"
+ },
+ "wish": {
+  "src": "fotos/wish.jpg",
+  "pagina": "https://grupowish.com/",
+  "credito": "Divulgação Grupo Wish",
+  "pequena": true
  }
 };
