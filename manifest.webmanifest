@@ -3,8 +3,8 @@
   "short_name": "Gramado",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#f5efe2",
-  "theme_color": "#1f3d2f",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "lang": "pt-BR",
   "icons": [
     { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },

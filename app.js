@@ -141,7 +141,6 @@
   function renderRoteiro() {
     const sec = $("#aba-roteiro");
     const dia = ROTEIRO[diaAtual];
-    const capa = LOCAIS[dia.capa];
     const extrasDoDia = store.get("extras", {});
     const meus = EXTRAS.filter((x) => extrasDoDia[x.id] === dia.data);
 
@@ -150,19 +149,14 @@
         ${ROTEIRO.map((d, i) => `<button class="dia-btn" data-dia="${i}" aria-pressed="${i === diaAtual}">
           <small>${d.titulo.split(" ")[0].slice(0, 3)}</small><b>${d.titulo.split(" ")[1].slice(0, 2)}</b></button>`).join("")}
       </div>
-      <article class="card">
-        <div class="capa" data-foto="${esc(capa.foto || "")}" data-galeria="${dia.capa}">
-          ${marca(capa)}
-          <span class="ver-fotos">${ICO_FOTO} fotos</span>
-          <div class="legenda"><h3>${esc(dia.titulo)}</h3><p>${esc(dia.subtitulo)}</p></div>
-        </div>
-        <ol class="timeline">
-          ${dia.itens.map(itemHTML).join("")}
-          ${meus.map((x) => `<li><span class="hora">Extra</span><div><p class="item-texto">${esc(x.nome)} <span class="tag kids">adicionado</span></p>
-            <div class="item-local">${miniHTML(x, x.id)}<div class="links">
-              <a class="pill" href="${urlMapa(x.mapa)}" target="_blank" rel="noopener">${ICO_PINO} Mapa</a></div></div></div></li>`).join("")}
-        </ol>
-      </article>`;
+      <header class="dia-topo">
+        <p class="dia-sub">${esc(dia.subtitulo)}</p>
+        <h2>${esc(dia.titulo)}</h2>
+      </header>
+      <ol class="blocos">
+        ${dia.itens.map(itemHTML).join("")}
+        ${meus.map((x) => blocoHTML({ hora: "Extra", texto: x.nome, extra: true }, x, x.id, true)).join("")}
+      </ol>`;
 
     sec.querySelectorAll("[data-dia]").forEach((b) => b.addEventListener("click", () => {
       diaAtual = Number(b.dataset.dia);
@@ -174,18 +168,26 @@
     ativarFotos(sec);
   }
 
-  function miniHTML(lugar, id) {
-    return `<button class="mini" data-foto="${esc(lugar.foto || "")}" data-galeria="${id}" aria-label="Fotos de ${esc(lugar.nome)}">${marca(lugar)}</button>`;
+  let vistos = new Set();
+  function itemHTML(it, i) {
+    if (i === 0) vistos = new Set();
+    const l = it.local && LOCAIS[it.local];
+    const comFoto = l && !vistos.has(it.local);
+    if (l) vistos.add(it.local);
+    return blocoHTML(it, l, it.local, comFoto);
   }
 
-  function itemHTML(it) {
-    const l = it.local && LOCAIS[it.local];
-    return `<li><span class="hora">${esc(it.hora)}</span><div>
-      <p class="item-texto">${esc(it.texto)}</p>
-      ${l ? `<div class="item-local">${miniHTML(l, it.local)}<div class="links">
-        <button class="pill" data-galeria="${it.local}">${ICO_FOTO} ${esc(l.nome)}</button>
-        <a class="pill" href="${urlMapa(l.mapa)}" target="_blank" rel="noopener">${ICO_PINO} Mapa</a></div></div>` : ""}
-    </div></li>`;
+  function blocoHTML(it, l, id, comFoto) {
+    return `<li class="bloco${l ? "" : " simples"}">
+      ${comFoto ? `<div class="capa" data-foto="${esc(l.foto || "")}" data-galeria="${id}">${marca(l)}<span class="ver-fotos">${ICO_FOTO} fotos</span></div>` : ""}
+      <div class="bloco-corpo">
+        <p class="hora">${esc(it.hora)}${it.extra ? ` <span class="tag kids">adicionado</span>` : ""}</p>
+        ${l ? `<h3 class="bloco-local">${esc(l.nome)}</h3>` : ""}
+        <p class="item-texto">${esc(it.texto)}</p>
+        ${l ? `<div class="links">
+          <button class="pill" data-galeria="${id}">${ICO_FOTO} Fotos</button>
+          <a class="pill" href="${urlMapa(l.mapa)}" target="_blank" rel="noopener">${ICO_PINO} Mapa</a></div>` : ""}
+      </div></li>`;
   }
 
   // ---------- Pendências ----------
