@@ -1,1 +1,128 @@
-{}
+{
+ "wish": {
+  "instagram": {
+   "wishresorts": "https://grupowish.com/"
+  },
+  "whatsapp": {}
+ },
+ "galeto": {
+  "instagram": {
+   "galetoitaliagramado": "https://www.galetoitalia.com.br/"
+  },
+  "whatsapp": {
+   "555432863375": "https://www.galetoitalia.com.br/"
+  }
+ },
+ "garfo": {
+  "instagram": {
+   "garfoebombacha": "https://www.garfoebombacha.com.br/",
+   "essemundoenosso": "https://www.essemundoenosso.com.br/churrascaria-garfo-e-bombacha-em-canela"
+  },
+  "whatsapp": {}
+ },
+ "hector": {
+  "instagram": {
+   "embed.js": "https://quantocustaviajar.com/blog/pizzaria-hector-gramado/",
+   "hectordragao": "https://quantocustaviajar.com/blog/pizzaria-hector-gramado/"
+  },
+  "whatsapp": {}
+ },
+ "belavista": {
+  "instagram": {},
+  "whatsapp": {
+   "555432861608": "https://www.belavista.tur.br/"
+  }
+ },
+ "bondinhos": {
+  "instagram": {
+   "bondinhoscanela": "https://www.bondinhoscanela.com.br/"
+  },
+  "whatsapp": {
+   "5554992061225": "https://www.bondinhoscanela.com.br/"
+  }
+ },
+ "skyglass": {
+  "instagram": {
+   "skyglasscanela": "https://www.skyglasscanela.com.br/"
+  },
+  "whatsapp": {
+   "555436999200": "https://www.skyglasscanela.com.br/"
+  }
+ },
+ "prawer": {
+  "instagram": {
+   "prawerchocolates": "https://www.prawer.com.br/"
+  },
+  "whatsapp": {
+   "5554999198213": "https://www.prawer.com.br/"
+  }
+ },
+ "acquamotion": {
+  "instagram": {
+   "acquamotion": "https://www.acquamotion.com.br/"
+  },
+  "whatsapp": {
+   "555430501720": "https://www.acquamotion.com.br/"
+  }
+ },
+ "minimundo": {
+  "instagram": {
+   "minimundogramado": "https://www.minimundo.com.br/"
+  },
+  "whatsapp": {
+   "555496885469": "https://www.minimundo.com.br/",
+   "555432864055": "https://www.minimundo.com.br/"
+  }
+ },
+ "aldeia": {
+  "instagram": {
+   "spcriancas": "https://saopauloparacriancas.com.br/?p=160270"
+  },
+  "whatsapp": {
+   "5554991293431": "https://www.aldeiadopapainoel.com.br/"
+  }
+ },
+ "parada": {
+  "instagram": {
+   "natalluzoficial": "https://www.natalluzdegramado.com.br/"
+  },
+  "whatsapp": {
+   "555436989575": "https://www.natalluzdegramado.com.br/"
+  }
+ },
+ "fornos": {
+  "instagram": {},
+  "whatsapp": {}
+ },
+ "carrinho": {
+  "instagram": {
+   "casadoviajanteoficial": "https://casadoviajante.com.br/"
+  },
+  "whatsapp": {}
+ },
+ "x-supercarros": {
+  "instagram": {
+   "supercarros": "https://www.supercarros.com.br/"
+  },
+  "whatsapp": {
+   "5554981400063": "https://www.supercarros.com.br/"
+  }
+ },
+ "x-olivas": {
+  "instagram": {
+   "olivasdegramado": "https://www.olivasdegramado.com.br/",
+   "o1": "https://www.olivasdegramado.com.br/"
+  },
+  "whatsapp": {
+   "5554996107626": "https://www.olivasdegramado.com.br/"
+  }
+ },
+ "x-snowland": {
+  "instagram": {
+   "snowlandgramado": "https://www.snowland.com.br/"
+  },
+  "whatsapp": {
+   "555430501720": "https://www.snowland.com.br/"
+  }
+ }
+}
