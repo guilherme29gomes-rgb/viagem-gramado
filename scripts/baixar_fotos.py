@@ -53,6 +53,23 @@ def buscar(termo):
         }
 
 
+def buscar_openverse(termo):
+    # Openverse reúne imagens de licença livre (Flickr, museus etc.).
+    params = {"q": termo, "page_size": "8"}
+    dados = json.loads(get("https://api.openverse.org/v1/images/?" + urllib.parse.urlencode(params)))
+    for r in dados.get("results", []):
+        lic = (r.get("license") or "").upper()
+        versao = r.get("license_version") or ""
+        yield {
+            "url": r.get("url"),
+            "pagina": r.get("foreign_landing_url") or "",
+            "titulo": r.get("title") or "",
+            "autor": r.get("creator") or "",
+            "licenca": f"CC {lic} {versao}".strip() if lic not in ("CC0", "PDM") else lic,
+            "fonte": r.get("source") or "openverse",
+        }
+
+
 def main():
     os.makedirs(SAIDA, exist_ok=True)
     locais = json.load(open("scripts/fotos.json", encoding="utf-8"))
@@ -62,13 +79,19 @@ def main():
         if local.get("pronta"):
             continue
         time.sleep(2)
+        achadas = []
         try:
-            achadas = list(buscar(local["busca"]))[:3]
+            if local.get("fonte") == "openverse":
+                for termo in local["buscas"]:
+                    achadas += list(buscar_openverse(termo))[:3]
+                    time.sleep(2)
+            else:
+                achadas = list(buscar(local["busca"]))[:3]
         except Exception as e:  # segue para o próximo local
             print("erro na busca", local["id"], e)
-            continue
+        prefixo = "o" if local.get("fonte") == "openverse" else ""
         for n, foto in enumerate(achadas, 1):
-            nome = f"{local['id']}-{n}.jpg"
+            nome = f"{local['id']}-{prefixo}{n}.jpg"
             try:
                 with open(os.path.join(SAIDA, nome), "wb") as f:
                     f.write(get(foto["url"]))

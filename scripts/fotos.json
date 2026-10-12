@@ -3,19 +3,30 @@
   "id": "poa",
   "nome": "Aeroporto Salgado Filho",
   "busca": "Aeroporto Salgado Filho terminal",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "estrada",
   "nome": "Estrada BR-116 / RS-115",
   "busca": "Serra Gaúcha estrada Gramado",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "RS-115 Gramado",
+   "Serra Gaúcha estrada",
+   "Gramado Rio Grande do Sul road"
+  ]
  },
  {
   "id": "wish",
   "nome": "Wish Serrano",
   "busca": "Wish Serrano Gramado",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "Wish Serrano Gramado",
+   "Serrano Resort Gramado"
+  ]
  },
  {
   "id": "centro",
@@ -33,7 +44,12 @@
   "id": "etnias",
   "nome": "Praça das Etnias – Vila de Natal",
   "busca": "Casa do Papai Noel Gramado",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "Praça das Etnias Gramado",
+   "Gramado Natal Luz Papai Noel"
+  ]
  },
  {
   "id": "ruacoberta",
@@ -45,7 +61,12 @@
   "id": "galeto",
   "nome": "Galeto Itália",
   "busca": "Galeto Itália Gramado",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "Galeto Itália Gramado",
+   "galeto primo canto"
+  ]
  },
  {
   "id": "bondinhos",
@@ -57,73 +78,103 @@
   "id": "skyglass",
   "nome": "Skyglass Canela",
   "busca": "Skyglass Canela",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "Skyglass Canela",
+   "Skyglass"
+  ]
  },
  {
   "id": "garfo",
   "nome": "Garfo e Bombacha",
   "busca": "Garfo e Bombacha Canela",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "Garfo e Bombacha Canela",
+   "churrasco gaúcho"
+  ]
  },
  {
   "id": "lagonegro",
   "nome": "Lago Negro",
   "busca": "Lago Negro Gramado",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "prawer",
   "nome": "Fábrica de Chocolate Prawer",
   "busca": "Chocolate Prawer Gramado",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "Prawer chocolate Gramado",
+   "Prawer Gramado"
+  ]
  },
  {
   "id": "fornos",
   "nome": "Fornos de Gramado",
   "busca": "Fornos de Gramado",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "Fornos de Gramado",
+   "cuca alemã"
+  ]
  },
  {
   "id": "palacio",
   "nome": "Palácio dos Festivais",
   "busca": "Palácio dos Festivais Gramado",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "acquamotion",
   "nome": "Acquamotion",
   "busca": "Acquamotion",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "Acquamotion Gramado",
+   "Acquamotion"
+  ]
  },
  {
   "id": "hector",
   "nome": "Hector Pizzaria",
   "busca": "Hector pizzaria Gramado",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "Hector pizzaria Gramado",
+   "pizzaria Gramado"
+  ]
  },
  {
   "id": "minimundo",
   "nome": "Mini Mundo",
   "busca": "Mini Mundo Gramado",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "aldeia",
   "nome": "Aldeia do Papai Noel",
   "busca": "Aldeia do Papai Noel Gramado",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "belavista",
   "nome": "Café Colonial Bela Vista",
   "busca": "Café colonial Gramado",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-snowland",
   "nome": "Snowland",
   "busca": "Snowland Gramado",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-ruatorta",
@@ -135,96 +186,111 @@
   "id": "x-joaquina",
   "nome": "Lago Joaquina Rita Bier",
   "busca": "Lago Joaquina Rita Bier",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-matriz",
   "nome": "Igreja Matriz São Pedro",
   "busca": "Igreja Matriz São Pedro Gramado",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-catedral",
   "nome": "Catedral de Pedra",
   "busca": "Catedral de Pedra Canela",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-terramagica",
   "nome": "Terra Mágica Florybal",
   "busca": "Terra Mágica Florybal",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-mundovapor",
   "nome": "Mundo a Vapor",
   "busca": "Mundo a Vapor Canela",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-alpen",
   "nome": "Alpen Park",
   "busca": "Alpen Park Canela",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "Alpen Park Canela",
+   "Alpen Park"
+  ]
  },
  {
   "id": "x-gramadozoo",
   "nome": "GramadoZoo",
   "busca": "Gramado Zoo",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-dreamland",
   "nome": "Dreamland – Museu de Cera",
   "busca": "Museu de Cera Dreamland Gramado",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-supercarros",
   "nome": "Super Carros / Hollywood Dream Cars",
   "busca": "Hollywood Dream Cars Gramado",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "Hollywood Dream Cars Gramado",
+   "Super Carros Gramado"
+  ]
  },
  {
   "id": "x-lavanda",
   "nome": "Le Jardin Parque de Lavanda",
   "busca": "Le Jardin Parque de Lavanda Gramado",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-olivas",
   "nome": "Olivas de Gramado",
   "busca": "Olivas de Gramado",
-  "pronta": false
+  "pronta": false,
+  "fonte": "openverse",
+  "buscas": [
+   "Olivas de Gramado",
+   "Olivas Gramado"
+  ]
  },
  {
   "id": "x-quilombo",
   "nome": "Vale do Quilombo",
   "busca": "Vale do Quilombo Gramado",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-caracol",
   "nome": "Parque do Caracol (mirante)",
   "busca": "Parque Estadual do Caracol",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-ferradura",
   "nome": "Parque da Ferradura",
   "busca": "Parque da Ferradura Canela",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-castelinho",
   "nome": "Castelinho Caracol",
   "busca": "Castelinho Caracol Canela",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-florybal",
   "nome": "Castelo / Reino do Chocolate",
   "busca": "Florybal Gramado",
-  "pronta": false
+  "pronta": true
  }
 ]
