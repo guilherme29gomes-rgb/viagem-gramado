@@ -129,11 +129,15 @@
   "id": "fornos",
   "nome": "Fornos de Gramado",
   "busca": "Fornos de Gramado",
-  "pronta": true,
-  "fonte": "openverse",
+  "pronta": false,
+  "fonte": "site",
   "buscas": [
    "Fornos de Gramado",
    "cuca alemã"
+  ],
+  "sites": [
+   "https://wanderlog.com/place/details/7244812/fornos-de-gramado",
+   "https://kupi.com/en/explore/brazil/gramado/fornos-de-gramado"
   ]
  },
  {
@@ -201,7 +205,14 @@
   "id": "x-ruatorta",
   "nome": "Rua Torta",
   "busca": "Rua Torta Gramado",
-  "pronta": true
+  "pronta": false,
+  "fonte": "site",
+  "sites": [
+   "https://www.buser.com.br/destinos/pontos-turisticos/rs/gramado/rua-torta-de-gramado",
+   "https://kupi.com/en/explore/brazil/gramado/crooked-street",
+   "https://www.essemundoenosso.com.br/?p=60590",
+   "https://blog.blablacar.com.br/passeios/o-que-fazer-de-graca-em-gramado"
+  ]
  },
  {
   "id": "x-joaquina",
