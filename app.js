@@ -23,8 +23,11 @@
   const cacheFotos = store.get(CACHE_FOTOS, {});
   const pedidos = {};
 
+  // Na versão publicada como página do Claude, fotos externas são bloqueadas.
+  const fotosOnline = window.FOTOS_ONLINE !== false;
+
   function buscarFotos(termo) {
-    if (!termo) return Promise.resolve([]);
+    if (!termo || !fotosOnline) return Promise.resolve([]);
     if (cacheFotos[termo]) return Promise.resolve(cacheFotos[termo]);
     if (pedidos[termo]) return pedidos[termo];
     const params = new URLSearchParams({
@@ -92,8 +95,8 @@
       <a class="pill" href="${urlGoogleFotos(lugar.mapa || lugar.nome)}" target="_blank" rel="noopener">🔎 Mais fotos no Google</a>
       <a class="pill" href="${urlMapa(lugar.mapa || lugar.nome)}" target="_blank" rel="noopener">📍 Abrir no mapa</a>`;
     if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
-    if (!lugar.foto) {
-      box.innerHTML = `<p class="vazio">Sem fotos livres para este lugar — use o botão abaixo para ver no Google.</p>`;
+    if (!lugar.foto || !fotosOnline) {
+      box.innerHTML = `<p class="vazio">Toque em "Mais fotos no Google" para ver este lugar.</p>`;
       return;
     }
     buscarFotos(lugar.foto).then((fotos) => {
