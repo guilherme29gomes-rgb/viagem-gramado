@@ -16,6 +16,9 @@
 
   const urlMapa = (q) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
   const urlGoogleFotos = (q) => `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(q)}`;
+  const marca = (l) => `<span class="monograma" aria-hidden="true">${esc(l.nome.charAt(0))}</span>`;
+  const ICO_FOTO = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>`;
+  const ICO_PINO = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg>`;
   const urlBusca = (q) => `https://www.google.com/search?q=${encodeURIComponent(q)}`;
 
   // ---------- fotos (Wikimedia Commons, carregadas no navegador) ----------
@@ -88,12 +91,12 @@
   dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
 
   function abrirGaleria(lugar) {
-    $("#galeria-titulo").textContent = `${lugar.emoji || ""} ${lugar.nome}`;
+    $("#galeria-titulo").textContent = lugar.nome;
     const box = $("#galeria-fotos");
     box.innerHTML = lugar.foto ? `<p class="vazio">Carregando fotos…</p>` : "";
     $("#galeria-links").innerHTML = `
-      <a class="pill" href="${urlGoogleFotos(lugar.mapa || lugar.nome)}" target="_blank" rel="noopener">🔎 Mais fotos no Google</a>
-      <a class="pill" href="${urlMapa(lugar.mapa || lugar.nome)}" target="_blank" rel="noopener">📍 Abrir no mapa</a>`;
+      <a class="pill" href="${urlGoogleFotos(lugar.mapa || lugar.nome)}" target="_blank" rel="noopener">${ICO_FOTO} Mais fotos no Google</a>
+      <a class="pill" href="${urlMapa(lugar.mapa || lugar.nome)}" target="_blank" rel="noopener">${ICO_PINO} Abrir no mapa</a>`;
     if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
     if (!lugar.foto || !fotosOnline) {
       box.innerHTML = `<p class="vazio">Toque em "Mais fotos no Google" para ver este lugar.</p>`;
@@ -120,10 +123,10 @@
     const dias = Math.ceil((new Date(VIAGEM.inicio) - new Date()) / 86400000);
     const fim = new Date("2026-11-12T23:59:00-03:00");
     let txt;
-    if (dias > 1) txt = `✈️ Faltam ${dias} dias`;
-    else if (dias === 1) txt = "✈️ É amanhã!";
-    else if (new Date() <= fim) txt = "🎄 Boa viagem!";
-    else txt = "💛 Viagem concluída";
+    if (dias > 1) txt = `Faltam ${dias} dias`;
+    else if (dias === 1) txt = "É amanhã!";
+    else if (new Date() <= fim) txt = "Boa viagem!";
+    else txt = "Viagem concluída";
     $("#contagem").textContent = txt;
   }
 
@@ -145,19 +148,19 @@
     sec.innerHTML = `
       <div class="dias" role="group" aria-label="Dias da viagem">
         ${ROTEIRO.map((d, i) => `<button class="dia-btn" data-dia="${i}" aria-pressed="${i === diaAtual}">
-          <b>${d.titulo.split(" ")[1].slice(0, 2)}</b><small>${d.titulo.split(" ")[0].slice(0, 3)}</small></button>`).join("")}
+          <small>${d.titulo.split(" ")[0].slice(0, 3)}</small><b>${d.titulo.split(" ")[1].slice(0, 2)}</b></button>`).join("")}
       </div>
       <article class="card">
         <div class="capa" data-foto="${esc(capa.foto || "")}" data-galeria="${dia.capa}">
-          ${capa.emoji}
-          <span class="ver-fotos">📷 fotos</span>
+          ${marca(capa)}
+          <span class="ver-fotos">${ICO_FOTO} fotos</span>
           <div class="legenda"><h3>${esc(dia.titulo)}</h3><p>${esc(dia.subtitulo)}</p></div>
         </div>
         <ol class="timeline">
           ${dia.itens.map(itemHTML).join("")}
           ${meus.map((x) => `<li><span class="hora">Extra</span><div><p class="item-texto">${esc(x.nome)} <span class="tag kids">adicionado</span></p>
             <div class="item-local">${miniHTML(x, x.id)}<div class="links">
-              <a class="pill" href="${urlMapa(x.mapa)}" target="_blank" rel="noopener">📍 Mapa</a></div></div></div></li>`).join("")}
+              <a class="pill" href="${urlMapa(x.mapa)}" target="_blank" rel="noopener">${ICO_PINO} Mapa</a></div></div></div></li>`).join("")}
         </ol>
       </article>`;
 
@@ -172,7 +175,7 @@
   }
 
   function miniHTML(lugar, id) {
-    return `<button class="mini" data-foto="${esc(lugar.foto || "")}" data-galeria="${id}" aria-label="Fotos de ${esc(lugar.nome)}">${lugar.emoji}</button>`;
+    return `<button class="mini" data-foto="${esc(lugar.foto || "")}" data-galeria="${id}" aria-label="Fotos de ${esc(lugar.nome)}">${marca(lugar)}</button>`;
   }
 
   function itemHTML(it) {
@@ -180,8 +183,8 @@
     return `<li><span class="hora">${esc(it.hora)}</span><div>
       <p class="item-texto">${esc(it.texto)}</p>
       ${l ? `<div class="item-local">${miniHTML(l, it.local)}<div class="links">
-        <button class="pill" data-galeria="${it.local}">📷 ${esc(l.nome)}</button>
-        <a class="pill" href="${urlMapa(l.mapa)}" target="_blank" rel="noopener">📍 Mapa</a></div></div>` : ""}
+        <button class="pill" data-galeria="${it.local}">${ICO_FOTO} ${esc(l.nome)}</button>
+        <a class="pill" href="${urlMapa(l.mapa)}" target="_blank" rel="noopener">${ICO_PINO} Mapa</a></div></div>` : ""}
     </div></li>`;
   }
 
@@ -241,11 +244,11 @@
           const l = LOCAIS[i.local];
           const ok = comprados[i.id];
           return `<article class="card">
-            <div class="capa" data-foto="${esc(l.foto || "")}" data-galeria="${i.local}">${l.emoji}<span class="ver-fotos">📷 fotos</span></div>
+            <div class="capa" data-foto="${esc(l.foto || "")}" data-galeria="${i.local}">${marca(l)}<span class="ver-fotos">${ICO_FOTO} fotos</span></div>
             <div class="corpo">
               <h3>${esc(l.nome)}</h3>
               <div class="meta"><span class="tag">${esc(i.dia)}</span>
-                <span class="tag ${ok ? "ok" : "status"}">${ok ? "✔ Garantido" : esc(i.status)}</span></div>
+                <span class="tag ${ok ? "ok" : "status"}">${ok ? "Garantido" : esc(i.status)}</span></div>
               <p>${esc(i.dica)}</p>
               <div class="acoes">
                 <a class="btn" href="${urlBusca(i.busca)}" target="_blank" rel="noopener">Onde comprar</a>
@@ -277,21 +280,21 @@
       <h2 class="secao">Lugares fora do roteiro</h2>
       <p class="intro">Ideias para encaixar. Escolha um dia e o lugar aparece no roteiro daquele dia.</p>
       <div class="filtros">
-        ${[["todos", "Todos"], ["kids", "👶 Bom com criança"], ["Gramado", "Gramado"], ["Canela", "Canela"]]
+        ${[["todos", "Todos"], ["kids", "Bom com criança"], ["Gramado", "Gramado"], ["Canela", "Canela"]]
           .map(([v, t]) => `<button class="pill" data-filtro="${v}" aria-pressed="${filtroExtras === v}">${t}</button>`).join("")}
       </div>
       <div class="grade">
         ${lista.map((x) => `<article class="card">
-          <div class="capa" data-foto="${esc(x.foto)}" data-galeria="${x.id}">${x.emoji}<span class="ver-fotos">📷 fotos</span></div>
+          <div class="capa" data-foto="${esc(x.foto)}" data-galeria="${x.id}">${marca(x)}<span class="ver-fotos">${ICO_FOTO} fotos</span></div>
           <div class="corpo">
             <h3>${esc(x.nome)}</h3>
-            <div class="meta"><span class="tag">${esc(x.cidade)}</span>${x.kids ? `<span class="tag kids">👶 bom com criança</span>` : ""}</div>
+            <div class="meta"><span class="tag">${esc(x.cidade)}</span>${x.kids ? `<span class="tag kids">bom com criança</span>` : ""}</div>
             <p>${esc(x.dica)}</p>
             <div class="acoes">
               <select data-extra="${x.id}" aria-label="Incluir ${esc(x.nome)} no roteiro" class="pill">
-                <option value="">➕ Incluir no dia…</option>${opcoesDia}
+                <option value="">Incluir no dia…</option>${opcoesDia}
               </select>
-              <a class="pill" href="${urlMapa(x.mapa)}" target="_blank" rel="noopener">📍 Mapa</a>
+              <a class="pill" href="${urlMapa(x.mapa)}" target="_blank" rel="noopener">${ICO_PINO} Mapa</a>
             </div>
           </div></article>`).join("")}
       </div>`;
@@ -317,7 +320,7 @@
       <h2 class="secao">Apps e sites de desconto</h2>
       <div class="app-lista">
         ${APPS.map((a) => `<a class="card app-item" href="${esc(a.link)}" target="_blank" rel="noopener">
-          <span class="app-ico">${a.emoji}</span>
+          <span class="app-ico">${marca(a)}</span>
           <div><h3>${esc(a.nome)} <span class="tag">${esc(a.cat)}</span></h3><p>${esc(a.desc)}</p></div></a>`).join("")}
       </div>
       <h2 class="secao">Dicas para economizar</h2>

@@ -5,18 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Roteiro Gramado</title>
   <meta name="description" content="Roteiro de viagem para Gramado e Canela, de 07 a 12 de novembro.">
-  <meta name="theme-color" content="#7a1f2b">
+  <meta name="theme-color" content="#1f3d2f">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Mulish:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topo">
     <div class="topo-conteudo">
-      <p class="topo-sub">07 a 12 de novembro · Gramado e Canela</p>
-      <h1>Roteiro Gramado 🎄</h1>
-      <p class="contagem" id="contagem"></p>
+      <p class="topo-sub">Gramado · Canela · Novembro 2026</p>
+      <h1>Roteiro de Natal</h1>
+      <p class="ornamento" aria-hidden="true"><span></span>✦<span></span></p>
+      <p class="contagem"><span id="contagem"></span> · 07 a 12 de novembro</p>
     </div>
   </header>
 
@@ -29,11 +33,11 @@
   </main>
 
   <nav class="abas" role="tablist">
-    <button role="tab" id="tab-roteiro" data-aba="roteiro" aria-selected="true"><span>🗓️</span>Roteiro</button>
-    <button role="tab" id="tab-pendencias" data-aba="pendencias"><span>✅</span>Pendências</button>
-    <button role="tab" id="tab-ingressos" data-aba="ingressos"><span>🎟️</span>Ingressos</button>
-    <button role="tab" id="tab-extras" data-aba="extras"><span>📍</span>Extras</button>
-    <button role="tab" id="tab-descontos" data-aba="descontos"><span>💸</span>Descontos</button>
+    <button role="tab" id="tab-roteiro" data-aba="roteiro" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="1.5"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>Roteiro</button>
+    <button role="tab" id="tab-pendencias" data-aba="pendencias"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4 4L19 7"/></svg>Pendências</button>
+    <button role="tab" id="tab-ingressos" data-aba="ingressos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4z"/><path d="M14 7v10" stroke-dasharray="2 2"/></svg>Ingressos</button>
+    <button role="tab" id="tab-extras" data-aba="extras"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg>Extras</button>
+    <button role="tab" id="tab-descontos" data-aba="descontos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>Descontos</button>
   </nav>
 
   <dialog id="galeria">
