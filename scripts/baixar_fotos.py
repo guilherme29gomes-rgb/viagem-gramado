@@ -102,7 +102,10 @@ def main():
         time.sleep(2)
         achadas = []
         try:
-            if local.get("fonte") == "site":
+            if local.get("fonte") == "url":
+                achadas = [{"url": u, "pagina": "https://grupowish.com/", "titulo": "Imagem do site oficial",
+                            "autor": "Divulgação", "licenca": "site oficial"} for u in local["urls"]]
+            elif local.get("fonte") == "site":
                 for site in local["sites"]:
                     try:
                         achadas += list(buscar_site(site))
@@ -116,7 +119,7 @@ def main():
                 achadas = list(buscar(local["busca"]))[:3]
         except Exception as e:  # segue para o próximo local
             print("erro na busca", local["id"], e)
-        prefixo = {"openverse": "o", "site": "s"}.get(local.get("fonte"), "")
+        prefixo = {"openverse": "o", "site": "s", "url": "u"}.get(local.get("fonte"), "")
         for n, foto in enumerate(achadas, 1):
             nome = f"{local['id']}-{prefixo}{n}.jpg"
             try:
