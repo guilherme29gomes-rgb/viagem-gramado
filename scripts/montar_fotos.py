@@ -50,7 +50,7 @@ def main():
             src = destino
         fotos[id_local] = {"src": src, "pagina": c.get("pagina", ""), "credito": credito(c)}
 
-    js = "// Gerado por scripts/montar_fotos.py. Fotos do Wikimedia Commons.\n"
+    js = "// Gerado por scripts/montar_fotos.py. Fotos livres do Wikimedia Commons e do Flickr (via Openverse).\n"
     js += "window.FOTOS_LOCAIS = " + json.dumps(fotos, ensure_ascii=False, indent=1) + ";\n"
     with open(embutir or "fotos.js", "w", encoding="utf-8") as f:
         f.write(js)

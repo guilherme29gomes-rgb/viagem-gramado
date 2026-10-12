@@ -9,7 +9,7 @@
   "id": "estrada",
   "nome": "Estrada BR-116 / RS-115",
   "busca": "Serra Gaúcha estrada Gramado",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "RS-115 Gramado",
@@ -21,7 +21,7 @@
   "id": "wish",
   "nome": "Wish Serrano",
   "busca": "Wish Serrano Gramado",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "Wish Serrano Gramado",
@@ -44,7 +44,7 @@
   "id": "etnias",
   "nome": "Praça das Etnias – Vila de Natal",
   "busca": "Casa do Papai Noel Gramado",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "Praça das Etnias Gramado",
@@ -61,7 +61,7 @@
   "id": "galeto",
   "nome": "Galeto Itália",
   "busca": "Galeto Itália Gramado",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "Galeto Itália Gramado",
@@ -78,7 +78,7 @@
   "id": "skyglass",
   "nome": "Skyglass Canela",
   "busca": "Skyglass Canela",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "Skyglass Canela",
@@ -89,7 +89,7 @@
   "id": "garfo",
   "nome": "Garfo e Bombacha",
   "busca": "Garfo e Bombacha Canela",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "Garfo e Bombacha Canela",
@@ -106,7 +106,7 @@
   "id": "prawer",
   "nome": "Fábrica de Chocolate Prawer",
   "busca": "Chocolate Prawer Gramado",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "Prawer chocolate Gramado",
@@ -117,7 +117,7 @@
   "id": "fornos",
   "nome": "Fornos de Gramado",
   "busca": "Fornos de Gramado",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "Fornos de Gramado",
@@ -134,7 +134,7 @@
   "id": "acquamotion",
   "nome": "Acquamotion",
   "busca": "Acquamotion",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "Acquamotion Gramado",
@@ -145,7 +145,7 @@
   "id": "hector",
   "nome": "Hector Pizzaria",
   "busca": "Hector pizzaria Gramado",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "Hector pizzaria Gramado",
@@ -180,7 +180,7 @@
   "id": "x-ruatorta",
   "nome": "Rua Torta",
   "busca": "Rua Torta Gramado",
-  "pronta": false
+  "pronta": true
  },
  {
   "id": "x-joaquina",
@@ -216,7 +216,7 @@
   "id": "x-alpen",
   "nome": "Alpen Park",
   "busca": "Alpen Park Canela",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "Alpen Park Canela",
@@ -239,7 +239,7 @@
   "id": "x-supercarros",
   "nome": "Super Carros / Hollywood Dream Cars",
   "busca": "Hollywood Dream Cars Gramado",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "Hollywood Dream Cars Gramado",
@@ -256,7 +256,7 @@
   "id": "x-olivas",
   "nome": "Olivas de Gramado",
   "busca": "Olivas de Gramado",
-  "pronta": false,
+  "pronta": true,
   "fonte": "openverse",
   "buscas": [
    "Olivas de Gramado",

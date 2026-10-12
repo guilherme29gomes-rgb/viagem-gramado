@@ -1,4 +1,4 @@
-// Gerado por scripts/montar_fotos.py. Fotos do Wikimedia Commons.
+// Gerado por scripts/montar_fotos.py. Fotos livres do Wikimedia Commons e do Flickr (via Openverse).
 window.FOTOS_LOCAIS = {
  "poa": {
   "src": "fotos/poa.jpg",
@@ -119,5 +119,30 @@ window.FOTOS_LOCAIS = {
   "src": "fotos/x-snowland.jpg",
   "pagina": "https://commons.wikimedia.org/wiki/File:RenatoSoares_SnowLand_Gramado_RS_(40193258034).jpg",
   "credito": "MTur Destinos · Public domain"
+ },
+ "garfo": {
+  "src": "fotos/garfo.jpg",
+  "pagina": "https://www.flickr.com/photos/39558803@N00/20932426036",
+  "credito": "Carlos Varela · CC BY 2.0"
+ },
+ "prawer": {
+  "src": "fotos/prawer.jpg",
+  "pagina": "https://www.flickr.com/photos/8550860@N06/11876666364",
+  "credito": "the tablehopper · CC BY-NC-ND 2.0"
+ },
+ "etnias": {
+  "src": "fotos/etnias.jpg",
+  "pagina": "https://www.flickr.com/photos/27874578@N06/18494814715",
+  "credito": "Felipe Valduga · CC BY 2.0"
+ },
+ "x-alpen": {
+  "src": "fotos/x-alpen.jpg",
+  "pagina": "https://www.flickr.com/photos/135218038@N06/20229095743",
+  "credito": "Augusto08 · CC BY-NC-SA 2.0"
+ },
+ "estrada": {
+  "src": "fotos/estrada.jpg",
+  "pagina": "https://www.flickr.com/photos/29039641@N02/3618484362",
+  "credito": "PAULO BROCKMANN · CC BY-NC-SA 2.0"
  }
 };
