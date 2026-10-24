@@ -65,10 +65,10 @@ const ROTEIRO = [
     data: "2026-11-09", titulo: "Segunda 09/11", subtitulo: "Dia leve", capa: "lagonegro",
     itens: [
       { hora: "09h00", texto: "Lago Negro com pedalinho de cisne. Entrada gratuita, 6 min do hotel", local: "lagonegro" },
-      { hora: "10h00", texto: "Mundo Criamigos, no centro: 50 atrações em seis salas temáticas e oficina para montar o próprio bichinho de pelúcia", local: "criamigos" },
-      { hora: "13h30", texto: "Almoço e soneca no hotel", local: "wish" },
-      { hora: "16h30", texto: "Fornos de Gramado, na Borges de Medeiros. Cucas e pães, fecha às 18h, só dinheiro", local: "fornos" },
-      { hora: "17h30", texto: "Centro a pé: Rua Coberta e Vila de Natal", local: "ruacoberta" },
+      { hora: "10h00–15h00", texto: "Mundo Criamigos, no centro: 50 atrações em seis salas temáticas e oficina para montar o próprio bichinho de pelúcia. Almoço por lá ou no centro", local: "criamigos" },
+      { hora: "15h30", texto: "Fornos de Gramado, na Borges de Medeiros. Cucas e pães, fecha às 18h, só dinheiro", local: "fornos" },
+      { hora: "16h15", texto: "Volta ao hotel para descanso e soneca", local: "wish" },
+      { hora: "18h00", texto: "Centro a pé: Rua Coberta e Vila de Natal", local: "ruacoberta" },
       { hora: "19h00", texto: "Jantar leve" },
       { hora: "20h00", texto: "Opcional: show de acendimento das luzes em frente ao Palácio dos Festivais, gratuito e diário", local: "palacio" },
     ],
@@ -145,7 +145,7 @@ const PENDENCIAS = [
 const INGRESSOS = [
   { id: "ing-bondinhos", local: "bondinhos", dia: "Dom 08/11 · 9h", status: "Comprar", dica: "Compre online para o horário de abertura. Confira a regra de gratuidade por idade.", busca: "Parque Bondinhos Aéreos Canela ingresso site oficial" },
   { id: "ing-skyglass", local: "skyglass", dia: "Dom 08/11 · 11h", status: "Comprar", dica: "Há combos com outras atrações de Canela — compare com o ingresso avulso.", busca: "Skyglass Canela ingresso site oficial" },
-  { id: "ing-criamigos", local: "criamigos", dia: "Seg 09/11 · 10h", status: "Comprar", dica: "Ingresso no site oficial ou na Civitatis; compare os preços. A oficina de pelúcia costuma ser paga à parte.", busca: "Mundo Criamigos Gramado ingresso" },
+  { id: "ing-criamigos", local: "criamigos", dia: "Seg 09/11 · 10h às 15h", status: "Comprar", dica: "Ingresso no site oficial ou na Civitatis; compare os preços. A oficina de pelúcia costuma ser paga à parte.", busca: "Mundo Criamigos Gramado ingresso" },
   { id: "ing-acquamotion", local: "acquamotion", dia: "Ter 10/11 · 10h", status: "Comprar", dica: "Online costuma sair mais barato que na bilheteria. Criança pequena entra grátis com documento.", busca: "Acquamotion Gramado ingresso site oficial" },
   { id: "ing-minimundo", local: "minimundo", dia: "Qua 11/11 · 9h", status: "Comprar", dica: "Compra antecipada evita fila na abertura.", busca: "Mini Mundo Gramado ingresso site oficial" },
   { id: "ing-aldeia", local: "aldeia", dia: "Qua 11/11 · 14h", status: "Comprar", dica: "Fecha às 18h. Veja se há gratuidade para crianças pequenas.", busca: "Aldeia do Papai Noel Gramado ingresso site oficial" },
