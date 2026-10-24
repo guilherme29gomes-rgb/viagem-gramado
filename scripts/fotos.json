@@ -148,21 +148,6 @@
   "pronta": true
  },
  {
-  "id": "acquamotion",
-  "nome": "Acquamotion",
-  "busca": "Acquamotion",
-  "pronta": true,
-  "fonte": "site",
-  "buscas": [
-   "Acquamotion Gramado",
-   "Acquamotion"
-  ],
-  "sites": [
-   "https://www.acquamotion.com.br/",
-   "https://acquamotion.com/"
-  ]
- },
- {
   "id": "hector",
   "nome": "Hector Pizzaria",
   "busca": "Hector pizzaria Gramado",
@@ -179,12 +164,6 @@
   ]
  },
  {
-  "id": "minimundo",
-  "nome": "Mini Mundo",
-  "busca": "Mini Mundo Gramado",
-  "pronta": true
- },
- {
   "id": "aldeia",
   "nome": "Aldeia do Papai Noel",
   "busca": "Aldeia do Papai Noel Gramado",
@@ -197,7 +176,7 @@
   "pronta": true
  },
  {
-  "id": "x-snowland",
+  "id": "snowland",
   "nome": "Snowland",
   "busca": "Snowland Gramado",
   "pronta": true

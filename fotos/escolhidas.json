@@ -6,7 +6,6 @@
  "bondinhos": "bondinhos-1.jpg",
  "lagonegro": "lagonegro-2.jpg",
  "palacio": "palacio-1.jpg",
- "minimundo": "minimundo-1.jpg",
  "aldeia": "aldeia-2.jpg",
  "belavista": "belavista-1.jpg",
  "x-joaquina": "x-joaquina-2.jpg",
@@ -22,12 +21,10 @@
  "x-ferradura": "x-ferradura-3.jpg",
  "x-castelinho": "x-castelinho-2.jpg",
  "x-florybal": "x-florybal-1.jpg",
- "x-snowland": "x-snowland-1.jpg",
  "garfo": "garfo-o3.jpg",
  "etnias": "etnias-o1.jpg",
  "x-alpen": "x-alpen-o3.jpg",
  "estrada": "estrada-o2.jpg",
- "acquamotion": "acquamotion-s1.jpg",
  "galeto": "galeto-s5.jpg",
  "skyglass": "skyglass-s5.jpg",
  "x-olivas": "x-olivas-s1.jpg",
@@ -35,5 +32,6 @@
  "x-ruatorta": "x-ruatorta-s20.jpg",
  "fornos": "fornos-s1.jpg",
  "vcp": "vcp-o3.jpg",
- "criamigos": "criamigos-s21.jpg"
+ "criamigos": "criamigos-s21.jpg",
+ "snowland": "x-snowland-1.jpg"
 }

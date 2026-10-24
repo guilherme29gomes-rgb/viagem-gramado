@@ -35,11 +35,6 @@ window.FOTOS_LOCAIS = {
   "pagina": "https://commons.wikimedia.org/wiki/File:Palacio_dos_festivais_-_Gramado_-_panoramio.jpg",
   "credito": "Larissa Fraga · CC BY 3.0"
  },
- "minimundo": {
-  "src": "fotos/minimundo.jpg",
-  "pagina": "https://commons.wikimedia.org/wiki/File:Mini_Mundo_em_setembro_de_2019_(24).jpg",
-  "credito": "Érico · CC BY-SA 4.0"
- },
  "aldeia": {
   "src": "fotos/aldeia.jpg",
   "pagina": "https://commons.wikimedia.org/wiki/File:Renato_Soares_Aldeia_do_Papai_Noel_Gramado_RS_22_(40696111605).jpg",
@@ -115,11 +110,6 @@ window.FOTOS_LOCAIS = {
   "pagina": "https://commons.wikimedia.org/wiki/File:Florybal_Gramado.jpg",
   "credito": "Lenny Maidana · CC BY-SA 4.0"
  },
- "x-snowland": {
-  "src": "fotos/x-snowland.jpg",
-  "pagina": "https://commons.wikimedia.org/wiki/File:RenatoSoares_SnowLand_Gramado_RS_(40193258034).jpg",
-  "credito": "MTur Destinos · Public domain"
- },
  "garfo": {
   "src": "fotos/garfo.jpg",
   "pagina": "https://www.flickr.com/photos/39558803@N00/20932426036",
@@ -139,11 +129,6 @@ window.FOTOS_LOCAIS = {
   "src": "fotos/estrada.jpg",
   "pagina": "https://www.flickr.com/photos/29039641@N02/3618484362",
   "credito": "PAULO BROCKMANN · CC BY-NC-SA 2.0"
- },
- "acquamotion": {
-  "src": "fotos/acquamotion.jpg",
-  "pagina": "https://www.acquamotion.com.br/",
-  "credito": "Divulgação Acquamotion"
  },
  "galeto": {
   "src": "fotos/galeto.jpg",
@@ -185,5 +170,10 @@ window.FOTOS_LOCAIS = {
   "src": "fotos/criamigos.jpg",
   "pagina": "https://www.civitatis.com/pt/gramado/ingresso-mundo-criamigos/",
   "credito": "Foto via Civitatis"
+ },
+ "snowland": {
+  "src": "fotos/snowland.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:RenatoSoares_SnowLand_Gramado_RS_(40193258034).jpg",
+  "credito": "MTur Destinos · Public domain"
  }
 };
