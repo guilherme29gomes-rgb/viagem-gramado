@@ -66,9 +66,9 @@ const ROTEIRO = [
     itens: [
       { hora: "09h00", texto: "Lago Negro com pedalinho de cisne. Entrada gratuita, 6 min do hotel", local: "lagonegro" },
       { hora: "10h00", texto: "Mundo Criamigos, no centro: 50 atrações em seis salas temáticas e oficina para montar o próprio bichinho de pelúcia", local: "criamigos" },
-      { hora: "12h00", texto: "Fornos de Gramado, na Borges de Medeiros. Cucas e pães, fecha às 18h, só dinheiro", local: "fornos" },
-      { hora: "13h00", texto: "Almoço e soneca no hotel", local: "wish" },
-      { hora: "17h00", texto: "Centro a pé: Rua Coberta e Vila de Natal", local: "ruacoberta" },
+      { hora: "13h30", texto: "Almoço e soneca no hotel", local: "wish" },
+      { hora: "16h30", texto: "Fornos de Gramado, na Borges de Medeiros. Cucas e pães, fecha às 18h, só dinheiro", local: "fornos" },
+      { hora: "17h30", texto: "Centro a pé: Rua Coberta e Vila de Natal", local: "ruacoberta" },
       { hora: "19h00", texto: "Jantar leve" },
       { hora: "20h00", texto: "Opcional: show de acendimento das luzes em frente ao Palácio dos Festivais, gratuito e diário", local: "palacio" },
     ],
