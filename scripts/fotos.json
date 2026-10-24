@@ -335,7 +335,7 @@
  {
   "id": "criamigos",
   "nome": "Mundo Criamigos",
-  "pronta": false,
+  "pronta": true,
   "fonte": "site",
   "sites": [
    "https://www.criamigos.com.br/",

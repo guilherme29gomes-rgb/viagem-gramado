@@ -180,5 +180,10 @@ window.FOTOS_LOCAIS = {
   "src": "fotos/vcp.jpg",
   "pagina": "https://www.flickr.com/photos/82289802@N00/49805784376",
   "credito": "Fernando Stankuns · CC BY-NC-SA 2.0"
+ },
+ "criamigos": {
+  "src": "fotos/criamigos.jpg",
+  "pagina": "https://www.civitatis.com/pt/gramado/ingresso-mundo-criamigos/",
+  "credito": "Foto via Civitatis"
  }
 };

@@ -145,7 +145,7 @@ const PENDENCIAS = [
 const INGRESSOS = [
   { id: "ing-bondinhos", local: "bondinhos", dia: "Dom 08/11 · 9h", status: "Comprar", dica: "Compre online para o horário de abertura. Confira a regra de gratuidade por idade.", busca: "Parque Bondinhos Aéreos Canela ingresso site oficial" },
   { id: "ing-skyglass", local: "skyglass", dia: "Dom 08/11 · 11h", status: "Comprar", dica: "Há combos com outras atrações de Canela — compare com o ingresso avulso.", busca: "Skyglass Canela ingresso site oficial" },
-  { id: "ing-criamigos", local: "criamigos", dia: "Seg 09/11 · 10h", status: "Comprar", dica: "Ingresso à venda online (também na Civitatis). A oficina de pelúcia é paga à parte.", busca: "Mundo Criamigos Gramado ingresso" },
+  { id: "ing-criamigos", local: "criamigos", dia: "Seg 09/11 · 10h", status: "Comprar", dica: "Ingresso no site oficial ou na Civitatis; compare os preços. A oficina de pelúcia costuma ser paga à parte.", busca: "Mundo Criamigos Gramado ingresso" },
   { id: "ing-acquamotion", local: "acquamotion", dia: "Ter 10/11 · 10h", status: "Comprar", dica: "Online costuma sair mais barato que na bilheteria. Criança pequena entra grátis com documento.", busca: "Acquamotion Gramado ingresso site oficial" },
   { id: "ing-minimundo", local: "minimundo", dia: "Qua 11/11 · 9h", status: "Comprar", dica: "Compra antecipada evita fila na abertura.", busca: "Mini Mundo Gramado ingresso site oficial" },
   { id: "ing-aldeia", local: "aldeia", dia: "Qua 11/11 · 14h", status: "Comprar", dica: "Fecha às 18h. Veja se há gratuidade para crianças pequenas.", busca: "Aldeia do Papai Noel Gramado ingresso site oficial" },
@@ -344,7 +344,7 @@ const CONTATOS = {
   belavista: { site: "https://www.belavista.tur.br/", whatsapp: "5432861608", telefone: "(54) 3286-2097" },
   bondinhos: { site: "https://www.bondinhoscanela.com.br/", instagram: "bondinhoscanela", whatsapp: "54992061225" },
   skyglass: { site: "https://www.skyglasscanela.com.br/", instagram: "skyglasscanela", whatsapp: "5436999200" },
-  criamigos: { site: "https://www.civitatis.com/pt/gramado/ingresso-mundo-criamigos/", obs: "Link de venda de ingresso pela Civitatis; site oficial e Instagram ainda não confirmados" },
+  criamigos: { site: "https://mundocriamigos.com.br/", instagram: "mundocriamigosgramado", whatsapp: "54997017005" },
   acquamotion: { site: "https://www.acquamotion.com.br/", instagram: "acquamotion", whatsapp: "5430501720" },
   minimundo: { site: "https://www.minimundo.com.br/", instagram: "minimundogramado", whatsapp: "5432864055" },
   aldeia: { site: "https://www.aldeiadopapainoel.com.br/", whatsapp: "54991293431" },
