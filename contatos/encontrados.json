@@ -22,6 +22,7 @@
  },
  "hector": {
   "instagram": {
+   "rsrc.php": "https://hector.com.br/",
    "embed.js": "https://quantocustaviajar.com/blog/pizzaria-hector-gramado/",
    "hectordragao": "https://quantocustaviajar.com/blog/pizzaria-hector-gramado/"
   },
@@ -105,7 +106,8 @@
    "supercarros": "https://www.supercarros.com.br/"
   },
   "whatsapp": {
-   "5554981400063": "https://www.supercarros.com.br/"
+   "5554981400063": "https://www.supercarros.com.br/",
+   "555499655405": "https://www.supercarros.com.br/"
   }
  },
  "x-olivas": {
@@ -123,6 +125,17 @@
   },
   "whatsapp": {
    "555430501720": "https://www.snowland.com.br/"
+  }
+ },
+ "criamigos": {
+  "instagram": {
+   "criamigos": "https://www.criamigos.com.br/",
+   "mundocriamigosgramado": "https://mundocriamigos.com.br/",
+   "civitatis": "https://www.civitatis.com/pt/gramado/ingresso-mundo-criamigos/"
+  },
+  "whatsapp": {
+   "555140426316": "https://www.criamigos.com.br/",
+   "5554997017005": "https://mundocriamigos.com.br/"
   }
  }
 }
