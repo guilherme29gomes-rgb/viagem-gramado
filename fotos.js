@@ -125,11 +125,6 @@ window.FOTOS_LOCAIS = {
   "pagina": "https://www.flickr.com/photos/39558803@N00/20932426036",
   "credito": "Carlos Varela · CC BY 2.0"
  },
- "prawer": {
-  "src": "fotos/prawer.jpg",
-  "pagina": "https://www.flickr.com/photos/8550860@N06/11876666364",
-  "credito": "the tablehopper · CC BY-NC-ND 2.0"
- },
  "etnias": {
   "src": "fotos/etnias.jpg",
   "pagina": "https://www.flickr.com/photos/27874578@N06/18494814715",

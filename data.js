@@ -23,7 +23,7 @@ const LOCAIS = {
   skyglass: { tipo: "montanha", nome: "Skyglass Canela", foto: "Skyglass Canela", mapa: "Skyglass Canela", emoji: "🪟" },
   garfo: { tipo: "garfo", nome: "Garfo e Bombacha", foto: null, mapa: "Garfo e Bombacha Canela", emoji: "🥩" },
   lagonegro: { tipo: "lago", nome: "Lago Negro", foto: "Lago Negro Gramado", mapa: "Lago Negro Gramado", emoji: "🦢" },
-  prawer: { tipo: "presente", nome: "Fábrica de Chocolate Prawer", foto: "Prawer chocolate Gramado", mapa: "Chocolate Prawer Av. das Hortênsias 4100 Gramado", emoji: "🍫" },
+  criamigos: { tipo: "castelo", nome: "Mundo Criamigos", foto: null, mapa: "Mundo Criamigos Gramado", emoji: "🧸" },
   fornos: { tipo: "cafe", nome: "Fornos de Gramado", foto: null, mapa: "Fornos de Gramado Borges de Medeiros", emoji: "🥖" },
   palacio: { tipo: "estrela", nome: "Palácio dos Festivais", foto: "Palácio dos Festivais Gramado", mapa: "Palácio dos Festivais Gramado", emoji: "✨" },
   acquamotion: { tipo: "onda", nome: "Acquamotion", foto: "Acquamotion Gramado", mapa: "Acquamotion Gramado", emoji: "♨️" },
@@ -64,8 +64,8 @@ const ROTEIRO = [
   {
     data: "2026-11-09", titulo: "Segunda 09/11", subtitulo: "Dia leve", capa: "lagonegro",
     itens: [
-      { hora: "09h30", texto: "Lago Negro com pedalinho de cisne. Entrada gratuita, 6 min do hotel", local: "lagonegro" },
-      { hora: "11h00", texto: "Fábrica Prawer, Av. das Hortênsias 4100. Tour guiado de 30 min com degustação, só de segunda a sexta", local: "prawer" },
+      { hora: "09h00", texto: "Lago Negro com pedalinho de cisne. Entrada gratuita, 6 min do hotel", local: "lagonegro" },
+      { hora: "10h00", texto: "Mundo Criamigos, no centro: 50 atrações em seis salas temáticas e oficina para montar o próprio bichinho de pelúcia", local: "criamigos" },
       { hora: "12h00", texto: "Fornos de Gramado, na Borges de Medeiros. Cucas e pães, fecha às 18h, só dinheiro", local: "fornos" },
       { hora: "13h00", texto: "Almoço e soneca no hotel", local: "wish" },
       { hora: "17h00", texto: "Centro a pé: Rua Coberta e Vila de Natal", local: "ruacoberta" },
@@ -145,7 +145,7 @@ const PENDENCIAS = [
 const INGRESSOS = [
   { id: "ing-bondinhos", local: "bondinhos", dia: "Dom 08/11 · 9h", status: "Comprar", dica: "Compre online para o horário de abertura. Confira a regra de gratuidade por idade.", busca: "Parque Bondinhos Aéreos Canela ingresso site oficial" },
   { id: "ing-skyglass", local: "skyglass", dia: "Dom 08/11 · 11h", status: "Comprar", dica: "Há combos com outras atrações de Canela — compare com o ingresso avulso.", busca: "Skyglass Canela ingresso site oficial" },
-  { id: "ing-prawer", local: "prawer", dia: "Seg 09/11 · 11h", status: "Agendar", dica: "Tour só de segunda a sexta. Verifique se é preciso agendar horário.", busca: "Prawer chocolates tour fábrica Gramado agendamento" },
+  { id: "ing-criamigos", local: "criamigos", dia: "Seg 09/11 · 10h", status: "Comprar", dica: "Ingresso à venda online (também na Civitatis). A oficina de pelúcia é paga à parte.", busca: "Mundo Criamigos Gramado ingresso" },
   { id: "ing-acquamotion", local: "acquamotion", dia: "Ter 10/11 · 10h", status: "Comprar", dica: "Online costuma sair mais barato que na bilheteria. Criança pequena entra grátis com documento.", busca: "Acquamotion Gramado ingresso site oficial" },
   { id: "ing-minimundo", local: "minimundo", dia: "Qua 11/11 · 9h", status: "Comprar", dica: "Compra antecipada evita fila na abertura.", busca: "Mini Mundo Gramado ingresso site oficial" },
   { id: "ing-aldeia", local: "aldeia", dia: "Qua 11/11 · 14h", status: "Comprar", dica: "Fecha às 18h. Veja se há gratuidade para crianças pequenas.", busca: "Aldeia do Papai Noel Gramado ingresso site oficial" },
@@ -344,7 +344,7 @@ const CONTATOS = {
   belavista: { site: "https://www.belavista.tur.br/", whatsapp: "5432861608", telefone: "(54) 3286-2097" },
   bondinhos: { site: "https://www.bondinhoscanela.com.br/", instagram: "bondinhoscanela", whatsapp: "54992061225" },
   skyglass: { site: "https://www.skyglasscanela.com.br/", instagram: "skyglasscanela", whatsapp: "5436999200" },
-  prawer: { site: "https://www.prawer.com.br/", instagram: "prawerchocolates", whatsapp: "54999198213" },
+  criamigos: { site: "https://www.civitatis.com/pt/gramado/ingresso-mundo-criamigos/", obs: "Link de venda de ingresso pela Civitatis; site oficial e Instagram ainda não confirmados" },
   acquamotion: { site: "https://www.acquamotion.com.br/", instagram: "acquamotion", whatsapp: "5430501720" },
   minimundo: { site: "https://www.minimundo.com.br/", instagram: "minimundogramado", whatsapp: "5432864055" },
   aldeia: { site: "https://www.aldeiadopapainoel.com.br/", whatsapp: "54991293431" },

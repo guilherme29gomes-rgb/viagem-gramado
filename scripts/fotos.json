@@ -127,17 +127,6 @@
   "pronta": true
  },
  {
-  "id": "prawer",
-  "nome": "Fábrica de Chocolate Prawer",
-  "busca": "Chocolate Prawer Gramado",
-  "pronta": true,
-  "fonte": "openverse",
-  "buscas": [
-   "Prawer chocolate Gramado",
-   "Prawer Gramado"
-  ]
- },
- {
   "id": "fornos",
   "nome": "Fornos de Gramado",
   "busca": "Fornos de Gramado",
@@ -342,5 +331,16 @@
   "nome": "Castelo / Reino do Chocolate",
   "busca": "Florybal Gramado",
   "pronta": true
+ },
+ {
+  "id": "criamigos",
+  "nome": "Mundo Criamigos",
+  "pronta": false,
+  "fonte": "site",
+  "sites": [
+   "https://www.criamigos.com.br/",
+   "https://mundocriamigos.com.br/",
+   "https://www.civitatis.com/pt/gramado/ingresso-mundo-criamigos/"
+  ]
  }
 ]

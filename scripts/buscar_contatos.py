@@ -28,6 +28,7 @@ PAGINAS = {
     "x-supercarros": ["https://www.supercarros.com.br/"],
     "x-olivas": ["https://www.olivasdegramado.com.br/"],
     "x-snowland": ["https://www.snowland.com.br/"],
+    "criamigos": ["https://www.criamigos.com.br/", "https://mundocriamigos.com.br/", "https://www.mundocriamigos.com.br/", "https://www.civitatis.com/pt/gramado/ingresso-mundo-criamigos/"],
 }
 
 
