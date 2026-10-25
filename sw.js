@@ -1,5 +1,5 @@
 // Deixa o app funcionando offline (inclusive fotos já vistas).
-const CACHE = "gramado-v9";
+const CACHE = "gramado-v10";
 const ARQUIVOS = ["./", "index.html", "styles.css", "app.js", "data.js", "fotos.js", "icon.svg", "icone-3d-180.png", "icone-3d-512.png", "icone-3d-192.png", "icone-3d-maskable-192.png", "icone-3d-maskable-512.png", "manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {
@@ -34,7 +34,8 @@ self.addEventListener("fetch", (e) => {
   // Arquivos do app: rede primeiro, cache se estiver offline.
   if (url.origin === location.origin) {
     e.respondWith(
-      fetch(req)
+      // cache: "no-cache" pede sempre a versão nova ao servidor quando há internet.
+      fetch(req, { cache: "no-cache" })
         .then((resp) => {
           const copia = resp.clone();
           caches.open(CACHE).then((c) => c.put(req, copia));
