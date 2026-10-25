@@ -87,8 +87,8 @@ const ROTEIRO = [
       { hora: "10h00", texto: "Snowland na abertura: parque de neve coberto com área infantil. Confirme se abre na quarta (alguns sites dizem que fecha às quartas na baixa temporada)", local: "snowland" },
       { hora: "12h30", texto: "Almoço leve" },
       { hora: "13h30", texto: "Soneca", local: "wish" },
-      { hora: "17h00", texto: "Café Colonial Bela Vista. Substitui o jantar. Reserve e pague online", local: "belavista" },
-      { hora: "19h30", texto: "Volta ao hotel e malas prontas", local: "wish" },
+      { hora: "16h00", texto: "Café Colonial Bela Vista. Substitui o jantar. Reserve e pague online", local: "belavista" },
+      { hora: "18h30", texto: "Volta ao hotel e malas prontas", local: "wish" },
     ],
   },
   {
@@ -130,7 +130,7 @@ const PENDENCIAS = [
     { id: "res-galeto", local: "galeto", texto: "Reservar Galeto Itália — sábado 07/11, 19h" },
     { id: "res-garfo", local: "garfo", texto: "Reservar Garfo e Bombacha — domingo 08/11, 12h45" },
     { id: "res-hector", local: "hector", texto: "Reservar mesa no Hector Pizzaria — terça 10/11, 18h" },
-    { id: "res-belavista", local: "belavista", texto: "Reservar e pagar Café Colonial Bela Vista online — quarta 11/11, 17h" },
+    { id: "res-belavista", local: "belavista", texto: "Reservar e pagar Café Colonial Bela Vista online — quarta 11/11, 16h" },
   ]},
   { grupo: "Volta", itens: [
     { id: "voo-volta", texto: "Fazer check-in online do voo de volta Porto Alegre → Viracopos" },
@@ -147,7 +147,7 @@ const INGRESSOS = [
   { id: "ing-criamigos", local: "criamigos", dia: "Seg 09/11 · 10h às 15h", status: "Comprar", dica: "Ingresso no site oficial ou na Civitatis; compare os preços. A oficina de pelúcia costuma ser paga à parte.", busca: "Mundo Criamigos Gramado ingresso" },
   { id: "ing-snowland", local: "snowland", dia: "Qua 11/11 · 10h", status: "Comprar", dica: "Compare o site oficial com o Laçador de Ofertas (em 2025: R$ 259 x R$ 199). Montanha de Neve a partir de 1 ano; patinação só a partir de 1,15 m.", busca: "Snowland Gramado ingresso" },
   { id: "ing-aldeia", local: "aldeia", dia: "Ter 10/11 · 10h", status: "Comprar", dica: "Fecha às 18h. Veja se há gratuidade para crianças pequenas.", busca: "Aldeia do Papai Noel Gramado ingresso site oficial" },
-  { id: "ing-belavista", local: "belavista", dia: "Qua 11/11 · 17h", status: "Reservar e pagar", dica: "Pagamento online antecipado.", busca: "Café Colonial Bela Vista Gramado reserva" },
+  { id: "ing-belavista", local: "belavista", dia: "Qua 11/11 · 16h", status: "Reservar e pagar", dica: "Pagamento online antecipado.", busca: "Café Colonial Bela Vista Gramado reserva" },
   { id: "ing-natalluz", local: "parada", dia: "Opcional", status: "Shows pagos", dica: "Além da Parada gratuita, o Natal Luz tem espetáculos pagos (ex.: Grande Desfile, shows no Lago Joaquina Rita Bier). Ingressos esgotam cedo.", busca: "Natal Luz Gramado 2026 ingressos espetáculos" },
 ];
 
