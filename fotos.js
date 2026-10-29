@@ -100,11 +100,6 @@ window.FOTOS_LOCAIS = {
   "pagina": "https://commons.wikimedia.org/wiki/File:Parque_da_ferradura_-_Canela_-_RS.jpg",
   "credito": "Rodrigo Mazzola · CC BY-SA 3.0"
  },
- "x-castelinho": {
-  "src": "fotos/x-castelinho.jpg",
-  "pagina": "https://commons.wikimedia.org/wiki/File:Castelinho_Caracol,_Canela_RS.jpg",
-  "credito": "Daniel Garcia Neto · CC BY 2.0"
- },
  "x-florybal": {
   "src": "fotos/x-florybal.jpg",
   "pagina": "https://commons.wikimedia.org/wiki/File:Florybal_Gramado.jpg",
@@ -134,11 +129,6 @@ window.FOTOS_LOCAIS = {
   "src": "fotos/galeto.jpg",
   "pagina": "https://www.galetoitalia.com.br/",
   "credito": "Divulgação Galeto Itália"
- },
- "skyglass": {
-  "src": "fotos/skyglass.jpg",
-  "pagina": "https://www.skyglasscanela.com.br/",
-  "credito": "Divulgação Skyglass Canela"
  },
  "x-olivas": {
   "src": "fotos/x-olivas.jpg",
@@ -175,5 +165,15 @@ window.FOTOS_LOCAIS = {
   "src": "fotos/snowland.jpg",
   "pagina": "https://commons.wikimedia.org/wiki/File:RenatoSoares_SnowLand_Gramado_RS_(40193258034).jpg",
   "credito": "MTur Destinos · Public domain"
+ },
+ "castelinho": {
+  "src": "fotos/castelinho.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Castelinho_Caracol,_Canela_RS.jpg",
+  "credito": "Daniel Garcia Neto · CC BY 2.0"
+ },
+ "acquamotion": {
+  "src": "fotos/acquamotion.jpg",
+  "pagina": "https://www.acquamotion.com.br/",
+  "credito": "Divulgação Acquamotion"
  }
 };

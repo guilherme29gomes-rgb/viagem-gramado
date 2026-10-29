@@ -96,20 +96,6 @@
   "pronta": true
  },
  {
-  "id": "skyglass",
-  "nome": "Skyglass Canela",
-  "busca": "Skyglass Canela",
-  "pronta": true,
-  "fonte": "site",
-  "buscas": [
-   "Skyglass Canela",
-   "Skyglass"
-  ],
-  "sites": [
-   "https://www.skyglasscanela.com.br/"
-  ]
- },
- {
   "id": "garfo",
   "nome": "Garfo e Bombacha",
   "busca": "Garfo e Bombacha Canela",
@@ -300,7 +286,7 @@
   "pronta": true
  },
  {
-  "id": "x-castelinho",
+  "id": "castelinho",
   "nome": "Castelinho Caracol",
   "busca": "Castelinho Caracol Canela",
   "pronta": true
@@ -321,5 +307,10 @@
    "https://mundocriamigos.com.br/",
    "https://www.civitatis.com/pt/gramado/ingresso-mundo-criamigos/"
   ]
+ },
+ {
+  "id": "acquamotion",
+  "nome": "Acquamotion",
+  "pronta": true
  }
 ]
